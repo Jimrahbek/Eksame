@@ -21,33 +21,28 @@ h1 {
   font-family: Georgia;
   font-size: 55px;
   font-weight: 400;
-  line-height: 1;
 }
 
 h2 {
   font-family: Georgia;
   font-size: 36px;
-  line-height: 1.15;
   font-weight: 200;
 }
 
 h3 {
   font-family: "Quicksand", sans-serif;
   font-size: 25px;
-  line-height: 1.2;
 }
 
 h4 {
   font-family: "Quicksand", sans-serif;
   font-size: 20px;
-  line-height: 1.2;
 }
 
 p {
   font-family: "Alexandria", sans-serif;
   font-weight: 300;
   font-size: 18px;
-  line-height: 17px;
 }
 
 @media (max-width: 768px) {
