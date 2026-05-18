@@ -1,12 +1,13 @@
-# Teknisk dokumentation for Tema 9 gruppeprojekt
+# Teknisk dokumentation for 2.semester eksamen sommer 2026 (grp.4)
 
-Dette projekt er lavet som en del af tema 10. Vi har lavet en hjemmeside, der fokusere på at vise informationer om Anne Loises hjemmeside, der for nylig har etableret sig som en privat praktiserende psykolog, som har et ønske om at få sin egen hjemmeside, for at kunne nå ud til flere bruger.
+Denne case er lavet på baggrund af 2.semester eksamen. Til denne case har vi fået til opgave at lave en hjemmeside for psykologen Anne Louise Hjort, som for nyligt etableret sig som en privat praktiserende psykolog, med base på Nørreport og hendes privathjem i Dragør.
+Vi har tænkt os at opsætte projektet i astro og lave siden dynamisk via. Supabase, så i denne dokumentation vil vi vise hvordan vi tænkt os at sætte vores projekt op og gennemgår hvordan fordeler vores arbejde.
 
 ## Links
 
 - GitHub repository: [https://www.figma.com/design/JTCLmNz77TwwVXmraNdjVL/2.-semester-eksamen?node-id=50-4&p=f&t=Z5eOnUXyIoJDaSSj-0]
 - GitHub Pages: []
-- Figma: []
+- Figma: [https://www.figma.com/design/JTCLmNz77TwwVXmraNdjVL/2.-semester-eksamen?node-id=50-4&t=DPLhIzECSXqwCH8g-1]
 
 ## Projektstruktur
 
