@@ -1,17 +1,14 @@
 ---
-
+import Layout from "../layout/layout.astro";
+import Adresse from "../components/forside-adresser.astro";
+import Erfaring from "../components/forside-erfaring.astro";
+import Hero from "../components/forside-hero.astro";
+import Priser from "../components/forside-priser.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+<Hero />
+<Erfaring />
+<Adresse />
+<Priser />
+</Layout>
