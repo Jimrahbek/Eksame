@@ -1,7 +1,85 @@
  ---
-
+import adresse1 from "../assets/adresse1.png";
+import adresse2 from "../assets/adresse2.png";
  ---
+<div class="adresser">
+    <h2>adresser</h2>
+    <p>Mine klinikker ligger på Nørreport og i Dragør.
+</p>
+</div>
+
+<div class="grid_1-1">
+    <div>
+        <img src={adresse1.src} alt="">
+    </div>
+    <div class="psykologhuset">
+        <h2 class="h2_pad">Psykologhuset Trekanten</h2>
+        <h2 class="h2_pad">Nørre Voldgade 21, 3. sal</h2>
+        <h2 class="h2_pad">1358 København K</h2>
+        <p class="text_width1">I hjertet af indre by, med plads forsorgning, ro, og . Denne cantale placering giver nem adgagng med offentlig transport</p>
+    </div>
+</div>
+
+
+<div class="grid">
+    <div class="nordre">
+        <h2>Nordre Engvej 5,</h2>
+        <h2>2791 Dragør</h2>
+        <p class="text_width">I hjertet af indre by, med plads forsorgning, ro, og . Denne cantale placering giver nem adgagng med offentlig transport</p>
+    </div>
+        <div>
+        <img src={adresse2.src} alt="">
+    </div>
+</div>
 
   <style>
+.adresser{
+    width: 450px;
+    background-color: var(--color-section_accent);
+    padding: 18px 28px;
+    border-radius: 50px 5px 5px 5px;
+    color: #FFFFFF;
+}
 
+.psykologhuset{
+      background-color: var(--color-section_accent);
+    padding: 18px 28px;
+    border-radius: 5px 50px 5px 5px;
+    color: #FFFFFF;  
+
+    width: fit-content;
+}
+
+.nordre{
+      background-color: var(--color-section_accent);
+    padding: 18px 28px;
+    border-radius: 5px 5px 5px 50px;
+    color: #FFFFFF;
+    
+    width: fit-content;
+}
+
+.grid_1-1{
+          display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+}
+
+.grid{
+          display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+}
+
+.text_width{
+    width: 404.39px;
+}
+
+.text_width1{
+    width: 448.71px ;
+}
+
+.h2_pad{
+    width: 425px;
+}
  </style>
