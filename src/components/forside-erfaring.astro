@@ -1,7 +1,45 @@
  ---
-
+import Forside_erfaring from "../assets/forside-erfaring.png";
  ---
+<h2 class="erfaring">Min erfaring</h2>
+<div class="text_witdh">
+<p>Jeg har opbygget bred erfaring fra både det offentlige og private, herunder arbejde med kriser, traumer og psykologisk rådgivning. Med baggrund fra blandt andet Forsvaret, politiet og kommunale tilbud møder jeg dig med solid faglighed og forståelse for komplekse livssituationer.</p>
+<p class="text_pad">
+Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og arbejde med det, der fylder – i et tempo, der passer til dig.</p>
+</div>
 
+<div class="grid_1-1">
+<div>
+<h2>Faglig erfaring og uddannelse</h2>
+<h4>Krisepsykolog</h4>
+<h4>Autoriseret psykolog</h4>
+<h4>Specialist i klinisk psykologi samt godkendt supervisor</h4>
+<button class="btn">Mere om min erfaring</button>
+</div>
+<div>
+<img src={Forside_erfaring.src} alt="">
+</div>
+</div>
   <style>
+.erfaring{
+  padding-top: 40px;
+  padding-bottom: 30px;
+  text-align: center;
+}
 
+.text_pad{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.text_witdh{
+    padding-left: 110px;
+    padding-right: 110px;
+}
+
+.grid_1-1{
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
  </style>
