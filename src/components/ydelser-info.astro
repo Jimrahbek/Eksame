@@ -1,7 +1,59 @@
  ---
-
+import YdelserAnneLou from "../assets/ydelserannelouise.png";
+import YdelserLaptop from "../assets/laptop.png";
+import YdelserLocation from "../assets/location.png";
+import YdelserBehov from "../assets/behov.png";
+import YdelserSikkerhed from "../assets/sikkerhed.png";
  ---
+ <section class="grid-ydelser-info">
+<div class="grid-boks">
+    <h3>Yderlig information</h3>
+<p>Kørsel i forbindelse med opgaver
+500 kr pr. påbegyndt halve time samt høj kørselstakst pr km.</p>
+ <p>Betaling</p>
+<p>Privatpersoner betaler med mobilpay eller ved straksoverførsel fra netbank efter hver samtale og modtager elektronisk faktura efterfølgende. 
+Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
+<p>Tilskudsmuligheder</p>
+<p>Mange privatpersoner og arbejdspladser har forskellige forsikringsordninger, som giver tilskud til psykolog behandling. Undersøg derfor, hvilke vilkår dit forsikringsselskab har, når du selv vælger en autoriseret privatpraktiserende psykolog</p>
+</div>
+<img src={YdelserAnneLou.src} alt="Anne Louise">
+ </section>
+ <div class="logotekst">
+  <img src={YdelserLocation.src} alt="Location">
+  <img src={YdelserLaptop.src} alt="Laptop">
+  <p>Online og fysisk
+</p>
+<img src={YdelserBehov.src} alt="Location">
+  <p>Tilpasset dine hehov
 
-  <style>
+</p>
+<img src={YdelserSikkerhed.src} alt="Location">
+  <p>Trygt samtalerum
 
+</p>
+
+</div>
+  
+<style>
+.grid-ydelser-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 5rem;
+}
+.grid-boks{
+    background-color:var(--color-section_accent);
+    color: var(--color-text-light);
+}
+
+.logotekst{
+    display: flex;
+    gap:5rem;
+    align-items: flex-start
+}
+
+
+p{
+    padding: 2rem;
+}
  </style>
