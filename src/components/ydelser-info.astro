@@ -5,16 +5,21 @@ import YdelserLocation from "../assets/location.png";
 import YdelserBehov from "../assets/behov.png";
 import YdelserSikkerhed from "../assets/sikkerhed.png";
  ---
+ 
  <section class="grid-ydelser-info">
 <div class="grid-boks">
     <h3>Yderlig information</h3>
 <p>Kørsel i forbindelse med opgaver
 500 kr pr. påbegyndt halve time samt høj kørselstakst pr km.</p>
- <p>Betaling</p>
+ <div class="betalings-boks">
+<p class="betaling">Betaling</p>
 <p>Privatpersoner betaler med mobilpay eller ved straksoverførsel fra netbank efter hver samtale og modtager elektronisk faktura efterfølgende. 
 Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
-<p>Tilskudsmuligheder</p>
+</div>
+<div class="tilskud-boks">
+<p class="tilskud">Tilskudsmuligheder</p>
 <p>Mange privatpersoner og arbejdspladser har forskellige forsikringsordninger, som giver tilskud til psykolog behandling. Undersøg derfor, hvilke vilkår dit forsikringsselskab har, når du selv vælger en autoriseret privatpraktiserende psykolog</p>
+</div>
 </div>
 <img src={YdelserAnneLou.src} alt="Anne Louise">
  </section>
@@ -38,12 +43,14 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 .grid-ydelser-info{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
-    padding: 5rem;
+    gap: 3rem;
+    padding: 3rem;
 }
 .grid-boks{
     background-color:var(--color-section_accent);
     color: var(--color-text-light);
+         border-radius:5px 5px 5px 60px;
+         
 }
 
 .logotekst{
@@ -52,8 +59,18 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
     align-items: flex-start
 }
 
-
-p{
+.tilskud-boks{
     padding: 2rem;
+}
+.betalings-boks{
+     padding: 2rem;
+}
+
+.betaling{
+    font-weight: bold;
+    
+}
+.tilskud{
+    font-weight: bold;
 }
  </style>
