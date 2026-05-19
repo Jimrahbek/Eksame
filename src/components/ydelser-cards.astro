@@ -3,12 +3,13 @@
  ---
 <h1>Ydelser og priser</h1>
   <section class="grid-cards">
-<div class="grid-card">
+<div class="radius-card">
     <h4>Individuel terapi</h4>
   <p>Behandling af private problemstillinger som f.eks stress, angst, depression, livskriser, mistrivsel, skilsmisse,  sygdom og tab ved dødsfald, barndomstraumer. (...)</p>
-  <p>Pris:
-1.450 kr. pr. session (60 min.)</p>
+  <p class="pris">Pris:</p>
+<p class="session">1.450 kr. pr. session (60 min.)</p>
 <a href=""><button><p>Læs mere</p></button></a>
+
 </div>
 
   <div class="grid-card">
@@ -25,7 +26,7 @@
 2300 kr pr.session (90 min.)</p>
   <a href=""><button><p>Læs mere</p></button></a>
   </div>
-   <div class="grid-card">
+   <div class="radius-card1">
   <h4>Individuel supervision</h4>
   <p>Supervision til psykologer på vej mod at blive klinisk psykolog eller til specialist godkendelse. (...)</p>
   <p>Pris:
@@ -76,16 +77,37 @@ Pris: aftales individuelt</p>
 }
 .grid-card{
     background-color:var(--color-section_accent);
-    color: var(--color-text-light);
-     border-radius: 4,62px;
-     padding: 8px;
+    color: var(--color-bg);
+ padding: 18px;
+   border-radius: 5px;
   
+  
+}
+.radius-card{
+     border-radius: 10px 0 0;
+         background-color:var(--color-section_accent);
+         color: var(--color-text-light);
+         padding: 8px;
+}
+.radius-card1{
+      color: var(--color-text-light);
+         padding: 8px; 
+          border-radius: 0 20px 0 0;
+          background-color:var(--color-section_accent);
 }
 button{
     background-color: var(--color-CTA);
-color: var(--color-text-light);
+color: var(--color-bg);
 width: 100%;
 padding: 3px;
-
+border-radius: 5px;
+}
+.pris{
+    
+    text-align: left;
+}
+.session{
+    
+    text-align: left;
 }
  </style>
