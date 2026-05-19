@@ -12,21 +12,31 @@
         <br />
         <p>Hvis du foretrækker det, kan du også udfylde den form, for at booke en tid hos mig. Hvis du kontakter mig igennem denne form, så bedes du give en kort beskrivelse af, hvad årsagen til du tager kontakt til mig er i “information”-feltet (alt information, der indsendes i denne form er krypteret, så al din information er sikret).</p>
       </article>
-
-      <label for="fulde_navn">Fulde navn:</label>
-      <input id="fulde_navn" name="fulde_navn" type="text" required />
-      <label for="pronominer">Pronominer:</label>
-      <input id="pronominer" name="pronominer" type="text" required />
-      <label for="tlf_nr">Tlf. nr.:</label>
-      <input id="tlf_nr" name="tlf_nr" type="text" required />
-      <label for="mailadresse">Mailadresse:</label>
-      <input id="mailadresse" name="mailadresse" type="text" required />
-      <label for="info">Information</label>
-      <input id="info" name="info" type="text" required />
+      <div class="container">
+        <div class="fulde_navn">
+          <label for="fulde_navn">Fulde navn:</label>
+          <input id="fulde_navn" name="fulde_navn" type="text" required />
+        </div>
+        <div class="pronominer">
+          <label for="pronominer">Pronominer:</label>
+          <input id="pronominer" name="pronominer" type="text" required />
+        </div>
+        <div class="tlf_nr">
+          <label for="tlf_nr">Tlf. nr.:</label>
+          <input id="tlf_nr" name="tlf_nr" type="text" required />
+        </div>
+        <div class="mailadresse">
+          <label for="mailadresse">Mailadresse:</label>
+          <input id="mailadresse" name="mailadresse" type="text" required />
+        </div>
+      </div>
+      <label for="info">Information:</label>
+      <textarea id="info" name="info" rows="15" cols="33" required></textarea>
       <button type="submit" class="button">Indsend</button>
     </fieldset>
   </form>
 </section>
+
 <style>
   .h1 {
     text-align: center;
@@ -42,10 +52,8 @@
     color: var(--color-text-light);
   }
   label {
-    font-family: "Alexandria", sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 17px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
     color: var(--color-text-light);
     padding-bottom: 0.5rem;
     padding-top: 1rem;
@@ -56,12 +64,19 @@
   #booking_form {
     margin-left: 7vw;
     margin-right: 7vw;
+    margin-bottom: 7rem;
     padding: 3rem;
     border-style: none;
     background-color: var(--color-section_accent);
+    border-radius: 5px 50px;
+    width: fit-content;
   }
   .fieldset {
     border-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .container > * {
     display: flex;
     flex-direction: column;
   }
@@ -75,5 +90,30 @@
     background-color: var(--color-CTA);
     border-style: none;
     border-radius: 5px;
+  }
+  textarea {
+    background-color: var(--color-section_bg);
+    border-style: none;
+    border-radius: 5px;
+  }
+  #info {
+    height: 80px;
+  }
+  .button {
+    margin-top: 1rem;
+    border-style: none;
+    border-radius: 5px 50px;
+    height: 30px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    color: var(--color-text-light);
+    background-color: var(--color-CTA);
+  }
+  @media (min-width: 768px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
   }
 </style>
