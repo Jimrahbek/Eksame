@@ -1,7 +1,52 @@
  ---
-
+import Hand from "../assets/hand-shake.png";
+import Target from "../assets/target.png";
+import Plant from "../assets/plant.png";
  ---
-
+ <div class="align">
+<h2>Priser og ydelser</h2>
+<p>Her finder du et overblik over de områder, jeg arbejder med. Jeg tilpasser altid forløbet til dine behov og din situation, så du får et trygt og meningsfuldt udgangspunkt for forandring. Sammen arbejder vi med det, der fylder, i et tempo der passer til dig.</p>
+</div>
+<div class="grid_1-1-1">
+<div>
+    <p>Tryg og fortrolig ramme</p>
+    <img src={Hand.src} alt="">
+</div>
+<div>
+    <p>Individuelt tilpassede forløb</p>
+    <img src={Target.src} alt="">
+</div>
+<div>
+    <p>Fokus på din udvikling</p>
+    <img src={Plant.src} alt="">
+ </div>
+</div>
+<div class="align_btn">
+<button class="btn" >Læs mere om mine tilbud</button>
+</div>
   <style>
+.align{
+    text-align: center;
+    padding-bottom: 40px;
+}
+.grid_1-1-1{
+          display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
 
+.grid_1-1-1 img{
+padding-top: 5px;
+}
+
+.align_btn{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.btn{
+    width: 550px;
+}
  </style>
