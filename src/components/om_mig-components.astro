@@ -1,5 +1,6 @@
  ---
 import billede from '../assets/4R7A57521.png';
+import arrowIcon from '../assets/arrowicon.png';
  ---
  
     <section class="om-mig">
@@ -38,7 +39,7 @@ import billede from '../assets/4R7A57521.png';
                         Trekanten (2026 - )
                     </div>
                     <div class="cirkel">
-                        <img src="arrowicon.png" alt="pil">
+                       <img src={arrowIcon.src} alt="pil">
                     </div>
                 </div>
                 <div class="accordion-content">
@@ -59,7 +60,7 @@ import billede from '../assets/4R7A57521.png';
                         Ringsted (2007 - 2018)
                     </div>
                     <div class="cirkel">
-                        <img src="arrowicon.png" alt="pil">
+                       <img src={arrowIcon.src} alt="pil">
                     </div>
                 </div>
                 <div class="accordion-content">
@@ -79,7 +80,7 @@ import billede from '../assets/4R7A57521.png';
                         klinik i Dragør (2006 - )
                     </div>
                     <div class="cirkel">
-                        <img src="arrowicon.png" alt="pil">
+                        <img src={arrowIcon.src} alt="pil">
                     </div>
                 </div>
                 <div class="accordion-content">
@@ -101,7 +102,7 @@ import billede from '../assets/4R7A57521.png';
                         (2004 - 2007)
                     </div>
                     <div class="cirkel">
-                        <img src="arrowicon.png" alt="pil">
+                        <img src={arrowIcon.src} alt="pil">
                     </div>
                 </div>
                 <div class="accordion-content">
@@ -122,7 +123,7 @@ import billede from '../assets/4R7A57521.png';
                         Amts specialskole (1997 - 2004)
                     </div>
                     <div class="cirkel">
-                        <img src="arrowicon.png" alt="pil">
+                       <img src={arrowIcon.src} alt="pil">
                     </div>
                 </div>
                 <div class="accordion-content">
@@ -143,7 +144,7 @@ import billede from '../assets/4R7A57521.png';
                         Kastrup (1986 - 1997)
                     </div>
                     <div class="cirkel">
-                        <img src="arrowicon.png" alt="pil">
+                       <img src={arrowIcon.src} alt="pil">
                     </div>
                 </div>
                 <div class="accordion-content">
@@ -164,8 +165,8 @@ import billede from '../assets/4R7A57521.png';
     </section>
 
 
- <script>
-    function toggleAccordion(element: HTMLElement) {
+ <script is:inline>
+    function toggleAccordion(element) {
         element.classList.toggle("active");
     }
 </script>
