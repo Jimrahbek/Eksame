@@ -1,6 +1,7 @@
  ---
 import Forside_erfaring from "../assets/forside-erfaring.png";
  ---
+ <div class="section_bg">
 <h2 class="erfaring">Min erfaring</h2>
 <div class="text_witdh">
 <p>Jeg har opbygget bred erfaring fra både det offentlige og private, herunder arbejde med kriser, traumer og psykologisk rådgivning. Med baggrund fra blandt andet Forsvaret, politiet og kommunale tilbud møder jeg dig med solid faglighed og forståelse for komplekse livssituationer.</p>
@@ -9,7 +10,7 @@ Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og arbe
 </div>
 
 <div class="grid_1-1">
-<div>
+<div class="box">
 <h2>Faglig erfaring og uddannelse</h2>
 <h4>Krisepsykolog</h4>
 <h4>Autoriseret psykolog</h4>
@@ -20,7 +21,14 @@ Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og arbe
 <img src={Forside_erfaring.src} alt="">
 </div>
 </div>
+</div>
   <style>
+  
+ .section_bg {
+ background-color: var(--color-section_accent); 
+ 
+}
+
 .erfaring{
   padding-top: 40px;
   padding-bottom: 30px;
@@ -41,5 +49,11 @@ Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og arbe
         display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.box{
+      background-color: var(--color-section_bg);
+    padding: 18px 28px;
+    border-radius: 5px 5px 5px 50px;
 }
  </style>
