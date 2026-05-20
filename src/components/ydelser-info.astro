@@ -23,7 +23,7 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 <p>Mange privatpersoner og arbejdspladser har forskellige forsikringsordninger, som giver tilskud til psykolog behandling. Undersøg derfor, hvilke vilkår dit forsikringsselskab har, når du selv vælger en autoriseret privatpraktiserende psykolog</p>
 </div>
 </div>
-<img src={YdelserAnneLou.src} alt="Anne Louise" width="550" height="400" style="border-radius: 5px 5px 60px 5px;">
+<img class="annelou" src={YdelserAnneLou.src} alt="Anne Louise" width="550" height="400" style="border-radius: 5px 5px 60px 5px;">
  </section>
  <div class="logotekst">
     <div class="locationoglaptop">
@@ -57,9 +57,7 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
     color: var(--color-text-light);
          border-radius:5px 5px 5px 60px;
          width:600px;
-         
-         
-}
+         }
 
 .logotekst{
     display: flex;
@@ -91,4 +89,47 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
     margin-right: 3rem;
 }
 
+ @media (max-width: 768px) {
+.grid-ydelser-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
+    margin: 2rem;
+    padding-top: 0.3rem;
+  }
+ .grid-boks{
+    background-color:var(--color-section_accent);
+    color: var(--color-text-light);
+         border-radius:60px 5px 5px 5px;
+         width:300px;
+           }
+
+.annelou{
+    width: 300px;
+    height: auto;
+}
+.logotekst{
+    display: flex;
+    gap:1rem;
+   flex-direction: column;
+}
+
+
+
+
+
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  </style>
