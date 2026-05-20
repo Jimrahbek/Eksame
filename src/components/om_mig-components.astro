@@ -3,6 +3,7 @@ import billede from "../assets/4R7A57521.png";
 import arrowIcon from "../assets/arrowicon.png";
 ---
 
+<h1 class="erfaring-titel">Min erfaring og kompetencer</h1>
 <section class="om-mig">
   <div class="billede-og-tekst">
     <div class="billede-container">
@@ -177,7 +178,7 @@ import arrowIcon from "../assets/arrowicon.png";
     grid-template-rows: 1fr auto;
     max-width: fit-content;
     margin: 0 auto;
-    padding-top: 200px;
+    padding-top: 50px;
     padding-bottom: 200px;
   }
 
@@ -201,7 +202,10 @@ import arrowIcon from "../assets/arrowicon.png";
     grid-row: 2;
     align-self: end;
   }
-
+  .erfaring-titel {
+    text-align: center;
+    margin-top: 40px;
+  }
   .knap button {
     background-color: #bf6b63;
     border: none;
@@ -212,6 +216,8 @@ import arrowIcon from "../assets/arrowicon.png";
     border-bottom-left-radius: 30px;
     transition: 0.3s ease;
     color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 17px;
   }
 
   .knap button:hover {
@@ -222,6 +228,7 @@ import arrowIcon from "../assets/arrowicon.png";
     width: 400px;
     height: auto;
     border-top-left-radius: 30px;
+    margin-bottom: 25px;
   }
 
   .p-tekst {
@@ -242,6 +249,7 @@ import arrowIcon from "../assets/arrowicon.png";
     flex-direction: column;
     gap: 15px;
     transition: all 1.3s ease;
+    min-height: 120px;
   }
 
   .erfaringer:first-child {
@@ -262,6 +270,7 @@ import arrowIcon from "../assets/arrowicon.png";
   .tekst {
     line-height: 1.3;
     color: #ffffff;
+    font-weight: 400;
   }
 
   .accordion-content {
@@ -270,6 +279,7 @@ import arrowIcon from "../assets/arrowicon.png";
     opacity: 0;
     line-height: 1.5;
     transition: all 0.3s ease;
+    font-weight: 200;
   }
 
   .erfaringer.active .accordion-content {
@@ -307,6 +317,16 @@ import arrowIcon from "../assets/arrowicon.png";
       box-sizing: border-box;
     }
 
+    .billede-og-tekst {
+      order: 1;
+    }
+    .knap {
+      order: 2;
+    }
+    .erfaring-section {
+      order: 3;
+    }
+
     .billede-og-tekst-og-knap,
     .erfaring-section {
       width: 100%;
@@ -322,9 +342,20 @@ import arrowIcon from "../assets/arrowicon.png";
       line-height: 1.5;
     }
 
+    .knap {
+      order: 2;
+      width: 100%;
+    }
+
+    .knap a {
+      display: block;
+      width: 100%;
+    }
+
     .knap button {
       width: 100%;
       padding: 14px 28px;
+      box-sizing: border-box;
     }
 
     .erfaringer {
