@@ -10,7 +10,7 @@ Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og arbe
 </div>
 
 <div class="grid_1-1">
-<div class="box">
+<div class="box_h2">
 <h2>Faglig erfaring og uddannelse</h2>
 <h4>Krisepsykolog</h4>
 <h4>Autoriseret psykolog</h4>
@@ -23,10 +23,17 @@ Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og arbe
 </div>
 </div>
   <style>
+.box_h2{
+  border-radius: 50px 5px 5px 5px;
+  padding: 18px 28px;
+  background-color: var(--color-section_bg);
+}
+
+.section_bg {
+  background-color: var(--color-section_accent);
+padding-bottom: 30p;
+  margin-inline: -100px;
   
- .section_bg {
- background-color: var(--color-section_accent); 
- 
 }
 
 .erfaring{
@@ -49,11 +56,8 @@ Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og arbe
         display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-}
 
-.box{
-      background-color: var(--color-section_bg);
-    padding: 18px 28px;
-    border-radius: 5px 5px 5px 50px;
+       width: fit-content;
+    margin-inline: auto;
 }
  </style>
