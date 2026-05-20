@@ -1,5 +1,5 @@
  ---
-import YdelserAnneLou from "../assets/ydelserannelouise.png";
+import YdelserAnneLou from "../assets/Anneloucomputer.png";
 import YdelserLaptop from "../assets/laptop.png";
 import YdelserLocation from "../assets/location.png";
 import YdelserBehov from "../assets/behov.png";
@@ -8,9 +8,11 @@ import YdelserSikkerhed from "../assets/sikkerhed.png";
  
  <section class="grid-ydelser-info">
 <div class="grid-boks">
-    <h3>Yderlig information</h3>
+    <div class="information-boks">
+    <h4>Yderlig information</h4>
 <p>Kørsel i forbindelse med opgaver
 500 kr pr. påbegyndt halve time samt høj kørselstakst pr km.</p>
+</div>
  <div class="betalings-boks">
 <p class="betaling">Betaling</p>
 <p>Privatpersoner betaler med mobilpay eller ved straksoverførsel fra netbank efter hver samtale og modtager elektronisk faktura efterfølgende. 
@@ -21,7 +23,7 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 <p>Mange privatpersoner og arbejdspladser har forskellige forsikringsordninger, som giver tilskud til psykolog behandling. Undersøg derfor, hvilke vilkår dit forsikringsselskab har, når du selv vælger en autoriseret privatpraktiserende psykolog</p>
 </div>
 </div>
-<img src={YdelserAnneLou.src} alt="Anne Louise">
+<img src={YdelserAnneLou.src} alt="Anne Louise" width="500" height="500" style="border-radius: 5px 5px 60px 5px;">
  </section>
  <div class="logotekst">
   <img src={YdelserLocation.src} alt="Location">
@@ -43,13 +45,17 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 .grid-ydelser-info{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    padding: 3rem;
+    gap: 1rem;
+    padding: 4rem;
+  
 }
 .grid-boks{
     background-color:var(--color-section_accent);
     color: var(--color-text-light);
          border-radius:5px 5px 5px 60px;
+         padding: 1rem;
+         width:650px;
+         
          
 }
 
@@ -60,10 +66,13 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 }
 
 .tilskud-boks{
-    padding: 2rem;
+    padding: 1rem;
 }
 .betalings-boks{
-     padding: 2rem;
+     padding: 1rem;
+}
+.information-boks{
+    padding: 1rem;
 }
 
 .betaling{
@@ -73,4 +82,6 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 .tilskud{
     font-weight: bold;
 }
+
+
  </style>
