@@ -23,13 +23,14 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 <p>Mange privatpersoner og arbejdspladser har forskellige forsikringsordninger, som giver tilskud til psykolog behandling. Undersøg derfor, hvilke vilkår dit forsikringsselskab har, når du selv vælger en autoriseret privatpraktiserende psykolog</p>
 </div>
 </div>
-<img src={YdelserAnneLou.src} alt="Anne Louise" width="500" height="500" style="border-radius: 5px 5px 60px 5px;">
+<img src={YdelserAnneLou.src} alt="Anne Louise" width="400" height="400" style="border-radius: 5px 5px 60px 5px;">
  </section>
  <div class="logotekst">
+    <div class="locationoglaptop">
   <img src={YdelserLocation.src} alt="Location">
   <img src={YdelserLaptop.src} alt="Laptop">
-  <p>Online og fysisk
-</p>
+  </div>
+  <p>Online og fysisk</p>
 <img src={YdelserBehov.src} alt="Location">
   <p>Tilpasset dine hehov
 
@@ -46,23 +47,25 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    padding: 4rem;
+    padding: 5rem;
+    margin: 2rem;
+    padding-top: 0.3rem;
   
 }
 .grid-boks{
     background-color:var(--color-section_accent);
     color: var(--color-text-light);
          border-radius:5px 5px 5px 60px;
-         padding: 1rem;
-         width:650px;
+         width:600px;
          
          
 }
 
 .logotekst{
     display: flex;
-    gap:5rem;
-    align-items: flex-start
+    gap:3rem;
+    align-items: flex-start;
+   justify-content: center;
 }
 
 .tilskud-boks{
@@ -83,5 +86,9 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
     font-weight: bold;
 }
 
+.onelineogfysisk{
+    padding:5px;
+    margin-right: 3rem;
+}
 
  </style>
