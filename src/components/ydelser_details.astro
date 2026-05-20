@@ -2,6 +2,127 @@
 
  ---
 
-  <style>
 
- </style>
+
+  <div class="ydesler-details-titel">
+          <h1>
+            [ID title] Individuel terapi
+          </h1>
+        </div>
+        <section class="ydelser-details-section">
+          <article class="ydelser-details-article">
+            [info text]
+            <p>Behandling af private problemstillinger som f.eks stress, angst, depression, livskriser, mistrivsel, skilsmisse, sygdom og tab ved dødsfald. Barndomstraumer. Behandling af arbejdsrelaterede problematikker som f.eks. udbrændthed, mobning, chikane, afskedigelse, eksamens angst, vold, trusler.</p>
+            [metode]
+            <p>Metode: Jeg tager udgangspunkt i dit specifikke problem og anvender forskellige tilgange afhængig af dig og din problematik. Narrativ/systemisk tilgang og kognitive metoder anvendes samt afsæt i psykodynamisk forståelse af mange problematikker. Ved traumebehandling anvender jeg EMDR og Hypnoterapi.</p>
+
+            <article class="ydelser-details-pris-wapper">
+               <div class="ydelser-details-pris">
+              <h4>Pris</h4>
+              <p>[Tid] pr. session ([pris])kr.</p>
+              </div>
+             
+              <button class="btn"><a href="/booking"><h4>Gå til booking</h4></a></button>
+    
+             </article>
+          </article>
+
+          <div class="ydelser-details-billed"><img src="4R7A5793.JPG" alt="Billede af terapeut" /></div>
+        </section>
+
+
+
+
+
+<style>
+
+/******************** title *********************/
+  .ydesler-details-titel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .ydesler-details-titel h1 {
+    font-size: 2.5rem;
+    color: var(--color-text);
+  }
+
+
+  /****************** overdordenet - sektion ***************/
+
+  .ydelser-details-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  /******************* info-box ****************/
+
+  .ydelser-details-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 2rem;
+    border-radius: 5px 5px 5px 50px;
+    width: 100%;
+    max-height: auto ;
+    background-color: var(--color-section_accent);
+  }
+
+  .ydelser-details-article p {
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+  }
+
+  /****************** pris og booking ****************/    
+  .ydelser-details-pris-wapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+
+  .ydelser-details-pris {
+    color: var(--color-text-light);
+  }
+  .btn {
+    display: block;
+    align-items: right;
+    background-color: var(--color-CTA);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px 50px 5px 50px;
+    font-size: 1rem;
+  }
+.btn a {
+color: var(--color-text-light);
+text-decoration: none;
+font-size: 1rem;
+font-weight: 500;
+}
+
+/**************** billled *************/
+
+  .ydelser-details-billed img {
+    display: block;
+    width: 100%;
+    max-height: auto;
+    border-radius: 5px 50px 5px 5px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .ydelser-details-section {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+
+    .ydelser-details-billed{
+        order: -1;
+    }
+  }
+</style>
