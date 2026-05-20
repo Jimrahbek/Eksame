@@ -12,10 +12,12 @@ Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og arbe
 <div class="grid_1-1">
 <div class="box_h2">
 <h2>Faglig erfaring og uddannelse</h2>
-<h4>Krisepsykolog</h4>
-<h4>Autoriseret psykolog</h4>
-<h4>Specialist i klinisk psykologi samt godkendt supervisor</h4>
+<h4 class="h4_pad">Krisepsykolog</h4>
+<h4 class="h4_pad">Autoriseret psykolog</h4>
+<h4 class="h4_pad">Specialist i klinisk psykologi samt godkendt supervisor</h4>
+<a href="/om_mig">
 <button class="btn">Mere om min erfaring</button>
+</a>
 </div>
 <div>
 <img src={Forside_erfaring.src} alt="">
@@ -23,15 +25,24 @@ Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og arbe
 </div>
 </div>
   <style>
+.h4_pad{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.erfaring, .text_witdh{
+  color: white;
+}
+  
 .box_h2{
-  border-radius: 50px 5px 5px 5px;
+  border-radius: 5px 5px 5px 50px;
   padding: 18px 28px;
   background-color: var(--color-section_bg);
 }
 
 .section_bg {
   background-color: var(--color-section_accent);
-padding-bottom: 30p;
+padding-bottom: 30px;
   margin-inline: -100px;
   
 }
