@@ -250,21 +250,28 @@ footer {
 }
 @media (max-width: 768px) {
   footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    padding: 2rem 1rem;
+    justify-content: space-between;
+    align-items: start;
+    padding: 2rem 1.5rem;
+  }
+
+  footer > *:nth-child(1) {
+    grid-column: 1;
+  }
+
+  footer > *:nth-child(2) {
+    grid-column: 2;
   }
 
   .footer_social_media {
-    width: 100%;
-    align-items: flex-start;
-    gap: 1rem;
+    grid-column: 2;
+    align-self: end;
   }
 
+  .footer_social_media div,
   .social-icons {
-    display: flex;
     flex-direction: row;
     gap: 12px;
   }
