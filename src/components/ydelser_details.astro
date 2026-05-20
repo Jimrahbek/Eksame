@@ -1,41 +1,22 @@
- ---
-// @ts-nocheck
-const { Anne_Louise_Hjort } = Astro.props;
-
-function formatSpilletid(value) {
-  if (!value) return "";
-
-  const id = new Titel(value);
-  if (isNaN(Titel)) return value;
-
-  return date.toLocaleString("da-DK", {
-    Titel: "text",  
-    Info: "text",
-    Pris: "numeric",
-    Metode: "text",
-    Tid: "numeric",
-  }).replace("0", "Aftales individuelt.");
-}
- const data = await fetch('https://urqowowoogzpytsxaprf.supabase.co').then(res => res.json());
- ---
+---
+const { ydelse } = Astro.props;
+---
 
 
   <div class="ydesler-details-titel">
           <h1>
-            {data.Title}
+            {ydelse.Title}
           </h1>
         </div>
         <section class="ydelser-details-section">
           <article class="ydelser-details-article">
-            {data.Info}
-            <p>Behandling af private problemstillinger som f.eks stress, angst, depression, livskriser, mistrivsel, skilsmisse, sygdom og tab ved dødsfald. Barndomstraumer. Behandling af arbejdsrelaterede problematikker som f.eks. udbrændthed, mobning, chikane, afskedigelse, eksamens angst, vold, trusler.</p>
-            {data.Metode}
-            <p>Metode: Jeg tager udgangspunkt i dit specifikke problem og anvender forskellige tilgange afhængig af dig og din problematik. Narrativ/systemisk tilgang og kognitive metoder anvendes samt afsæt i psykodynamisk forståelse af mange problematikker. Ved traumebehandling anvender jeg EMDR og Hypnoterapi.</p>
+           <p> {ydelse.Info} </p>
+             <p>Metode: {ydelse.Metode}</p>
 
             <article class="ydelser-details-pris-wapper">
                <div class="ydelser-details-pris">
               <h4>Pris</h4>
-              <p>{data.Tid} pr. session ({data.Pris})kr.</p>
+              <p>{ydelse.Tid} pr. session ({ydelse.Pris})kr.</p>
               </div>
              
               <button class="btn"><a href="src/components/booking.astro"><h4>Gå til booking</h4></a></button>
@@ -43,7 +24,7 @@ function formatSpilletid(value) {
              </article>
           </article>
 
-          <div class="ydelser-details-billed"><img src="src/assets/psykolog_i_baggrund.webp" alt="Billede af terapeut, der arbejder med en kunde" /></div>
+          <div class="ydelser-details-billed"><img src={`/src/assets/ydesler_img/${ydelse.id}.webp`} alt="Billede af terapeut, der arbejder med en kunde" /></div>
         </section>
 
 
