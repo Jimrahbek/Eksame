@@ -223,7 +223,8 @@ footer {
 .footer_social_media {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 16px;
   height: 100%;
 }
 
