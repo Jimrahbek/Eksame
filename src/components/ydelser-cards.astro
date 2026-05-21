@@ -11,11 +11,13 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
 <div class="radius-card">
     <h4>Individuel terapi</h4>
   <p>Behandling af private problemstillinger som f.eks stress, angst, depression, livskriser, mistrivsel, skilsmisse,  sygdom og tab ved dødsfald, barndomstraumer. (...)</p>
+  <div class="logoydelse">
   <div class="prisektion">
   <h4>Pris:</h4>
   <p>1.450 kr. pr. session (60 min.)</p>
 </div>
 <img src={YdelserInviduel.src} alt="Individuel terapi">
+</div>
 <a href=""><button><p>Læs mere</p></button></a>
 
 </div>
@@ -23,74 +25,89 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
   <div class="grid-card">
   <h4>Parterapi</h4>
   <p>Fokus i parterapi er kommunikation og at få øje på uhensigtsmæssige mønstre samt indsigt i egen og den andens historik. (...)</p>
+  <div class="logoydelse">
   <div class="prisektion">
-  <h4>Pris:</h4>
+  
+    <h4>Pris:</h4>
 <p>2.300 kr pr.session (90 min.)</p>
 </div>
 <img src={YdelserParteripi.src} alt="Parterapi">
-  <a href=""><button><p>Læs mere</p></button></a>
+  </div>
+<a href=""><button><p>Læs mere</p></button></a>
   </div>
   <div class="grid-card">
   <h4>Familieterapi</h4>
   <p>Familieterapi drejer sig om at få indsigt i og forståelse for hinanden i en familie, så alle har en plads og føler sig anerkendt og inkluderet. (...)</p>
+   <div class="logoydelse">
   <div class="prisektion">
   <h4>Pris:</h4>
 <p>2.300 kr pr.session (90 min.)</p>
 </div>
   <img src={YdelserFamilieterapi.src} alt="Familieterapi">
+  </div>
   <a href=""><button><p>Læs mere</p></button></a>
   </div>
    <div class="radius-card1">
   <h4>Individuel supervision</h4>
   <p>Supervision til psykologer på vej mod at blive klinisk psykolog eller til specialist godkendelse. (...)</p>
-   <div class="prisektion">
+   <div class="logoydelse">
+  <div class="prisektion">
   <h4>Pris:</h4>
 <p>1.500 kr pr.session (90 min.)</p>
 </div>
 <img src={YdelserInviduel.src} alt="Individuel terapi">
+</div>
 <a href=""><button><p>Læs mere</p></button></a>
   </div>
   <div class="grid-card">
   <h4>Gruppesupervision 2-6 pers.</h4>
   <p>Gruppesupervision til psykologer eller andre arbejdsgrupper som Sundhedsfaglige, pædagogiske samt evt. efterforskere eller andre med specialfunktioner indenfor bl.a. Politiet. (...)</p>
+  <div class="logoydelse">
   <div class="prisektion">
   <h4 class="pris">Pris:</h4>
 <p>1.500 kr pr.session (90 min.)</p>
 </div>
 <img src={YdelserGruppesupervision.src} alt="Gruppesupervision">
-  <a href=""><button><p>Læs mere</p></button></a>
+  </div>
+<a href=""><button><p>Læs mere</p></button></a>
   </div>
    <div class="grid-card">
 <h4>  Akut psykologisk gruppedebriefing 
 (max 12-15 pers.)</h4>
   <p>Krisestyring og håndtering samt iværksættelse af psykologisk gruppedebriefing efter en voldsom hændelse på arbejdspladsen eller uddannelsesstedet. (...)</p>
+  <div class="logoydelse">
   <div class="prisektion">
   <h4>Pris og omfang: aftales individuelt/</h4>
 <p>udarbejdes specifikt til jeres arbejdsplads</p>
 </div>
 <img src={YdelserGruppesupervision.src} alt="Gruppesupervision">
+  </div>
 <a href=""><button><p>Læs mere</p></button></a>
    </div>
       <div class="grid-card">
 <h4>Undervisning og kurser</h4>
   <p>Kurser i Krisestyring og håndtering  ved akutte stressreaktioner i forbindelse med voldsomme hændelser samt kurser i afholdelse af psykologisk debriefing (...)</p>
+  <div class="logoydelse">
   <div class="prisektion">
   <h4>Pris og omfang: aftales individuelt/</h4>
   <p>udarbejdes specifikt til jeres arbejdsplads</p>
 </div>
 <img src={YdelserUndervisning.src} alt="Undervisning og kurser">
-  <a href=""><button><p>Læs mere</p></button></a>
+  </div>
+<a href=""><button><p>Læs mere</p></button></a>
   </div>
  
     <div class="grid-card">
  <h4>Familieopstilling</h4>
   <p>I Familieopstilling arbejdes der i dybden med traumer nedarvet i slægten. Det bliver muligt at opnå indsigt i og forståelse for egne umiddelbart uforklarlige reaktionsmønstre. (...)</p>
+  <div class="logoydelse">
   <div class="prisektion">
   <h4>Pris:</h4>
 <p>Pris: aftales individuelt</p>
 </div>
 <img src={YdelserFamilieopstilling.src} alt="Familieopstilling">
-  <a href=""><button><p>Læs mere</p></button></a>
+  </div>
+<a href=""><button><p>Læs mere</p></button></a>
   </div>
    
   </section>
@@ -117,6 +134,7 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
     position: relative;
       display: flex;
     flex-direction: column;
+    padding-bottom:1rem;
    
    }
 .radius-card{
@@ -127,7 +145,7 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
           position: relative;
            display: flex;
     flex-direction: column;
-  
+    padding-bottom:1rem;
          
 }
 .radius-card1{
@@ -139,6 +157,7 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
            position: relative;
               display: flex;
     flex-direction: column;
+      padding-bottom:1rem;
   
 }
 button{
@@ -154,16 +173,16 @@ position: absolute;
 }
 
 img {
-    margin-left: auto;
-     margin-top: auto;
-    margin-bottom: 0;
-    margin-right: 0;
-   
- 
-    
-}
-.prisektion{
-    transform: translateY(2rem);
+display: block;
+    max-width: 120px;
+    height: auto;
+   }
+.logoydelse{
+   margin-top: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items:flex-end;
+   gap:1rem;
 }
 
 @media (max-width: 768px) {
@@ -183,7 +202,7 @@ img {
 .grid-card{
     background-color:var(--color-section_accent);
     color: var(--color-text-light);
- padding: 3px;
+
    border-radius: 5px;
   
    
@@ -192,14 +211,14 @@ img {
      border-radius: 40px 0 0;
          background-color:var(--color-section_accent);
            color: var(--color-text-light);
-         padding: 3px;
+       
     
   
          
 }
 .radius-card1{
       color: var(--color-text-light);
-         padding: 3px; 
+       
           background-color:var(--color-section_accent);
           color: var(--color-text-light);
    border-radius: 0;
@@ -232,11 +251,9 @@ position: absolute;
 
 }
 img {
-    margin-left: auto;
+  
      margin-top: auto;
-    margin-bottom: 0.1rem;
-    margin-right: 0.1rem;
-    display: block;
+  display: block;
  
     
 }
