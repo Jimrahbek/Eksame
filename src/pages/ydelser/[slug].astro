@@ -1,0 +1,41 @@
+---
+import Layout from "../../layout/layout.astro";
+import Ydelser from "../../components/ydelser_details.astro";
+
+type Ydelser = {
+  id: number;
+  slug: string;
+  tid: number;
+  titel: string;
+  metode: string;
+  pris: number;
+  info: string;
+  show_price: boolean;
+};
+
+export async function getStaticPaths() {
+  
+  const res = await fetch(`${import.meta.env.PUBLIC_SUPABASE_URL}/rest/v1/anne-louise-hjort?select=*`, {
+    headers: {
+      apikey: import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_KEY,
+    },
+  });
+
+  
+
+  const data: Ydelser[] = await res.json();
+
+  return data.map((ydelse: Ydelser) => ({
+    params: { slug: ydelse.slug },
+    props: { ydelse },
+  }));
+}
+
+
+
+const { ydelse } = Astro.props;
+---
+
+<Layout>
+  <Ydelser ydelse={ydelse} />
+</Layout>
