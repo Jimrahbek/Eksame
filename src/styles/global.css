@@ -17,8 +17,8 @@ body {
 }
 
 main {
-  /* padding-left: 100px;
-  padding-right: 100px; */
+  padding-left: 100px;
+  padding-right: 100px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100svh;
