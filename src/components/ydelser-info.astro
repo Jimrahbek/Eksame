@@ -1,4 +1,5 @@
  ---
+import { Image } from 'astro:assets';
 import YdelserAnneLou from "../assets/Anneloucomputer.png";
 import YdelserLaptop from "../assets/laptop.png";
 import YdelserLocation from "../assets/location.png";
@@ -23,19 +24,19 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 <p>Mange privatpersoner og arbejdspladser har forskellige forsikringsordninger, som giver tilskud til psykolog behandling. Undersøg derfor, hvilke vilkår dit forsikringsselskab har, når du selv vælger en autoriseret privatpraktiserende psykolog</p>
 </div>
 </div>
-<img class="annelou" src={YdelserAnneLou.src} alt="Anne Louise" width="550" height="400" style="border-radius: 5px 5px 60px 5px;">
+<Image class="annelou" src={YdelserAnneLou} alt="Anne Louise" width="550" height="400" style="border-radius: 5px 5px 60px 5px;" format="webp"/>
  </section>
  <div class="logotekst">
     <div class="locationoglaptop">
-  <img src={YdelserLocation.src} alt="Location">
-  <img src={YdelserLaptop.src} alt="Laptop">
+  <Image src={YdelserLocation} alt="Location" format="webp"/>
+  <Image src={YdelserLaptop} alt="Laptop" format="webp"/>
   </div>
   <p class="onelineogfysisk">Online og fysisk</p>
-<img src={YdelserBehov.src} alt="Location">
-  <p>Tilpasset dine hehov
+<Image src={YdelserBehov} alt="Location" format="webp"/>
+  <p>Tilpasset dine behov
 
 </p>
-<img src={YdelserSikkerhed.src} alt="Location">
+<Image src={YdelserSikkerhed} alt="Location" format="webp"/>
   <p>Trygt samtalerum
 
 </p>
@@ -113,8 +114,9 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 }
 .logotekst{
     display: flex;
-    gap:1rem;
+  gap:1rem;
    flex-direction: column;
+ 
 }
 
 
