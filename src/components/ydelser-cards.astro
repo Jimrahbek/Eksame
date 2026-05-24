@@ -11,7 +11,7 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
   <section class="grid-cards">
 <div class="radius-card">
     <h4>Individuel terapi</h4>
-  <p>Behandling af private problemstillinger som f.eks stress, angst, depression, livskriser, mistrivsel, skilsmisse,  sygdom og tab ved dødsfald, barndomstraumer. (...)</p>
+  <p>Behandling af private problemstillinger som f.eks stress, angst, depression, livskriser, mistrivsel, skilsmisse, sygdom og tab ved dødsfald, barndomstraumer. (...)</p>
   <div class="logoydelse">
   <div class="prisektion">
   <h4>Pris:</h4>
@@ -65,7 +65,7 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
   <p>Gruppesupervision til psykologer eller andre arbejdsgrupper som Sundhedsfaglige, pædagogiske samt evt. efterforskere eller andre med specialfunktioner indenfor bl.a. Politiet. (...)</p>
   <div class="logoydelse">
   <div class="prisektion">
-  <h4 class="pris">Pris:</h4>
+  <h4>Pris:</h4>
 <p>1.500 kr pr.session (90 min.)</p>
 </div>
 <Image src={YdelserGruppesupervision} alt="Gruppesupervision" format="webp"/>
@@ -87,7 +87,7 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
    </div>
       <div class="grid-card">
 <h4>Undervisning og kurser</h4>
-  <p>Kurser i Krisestyring og håndtering  ved akutte stressreaktioner i forbindelse med voldsomme hændelser samt kurser i afholdelse af psykologisk debriefing (...)</p>
+  <p>Kurser i Krisestyring og håndtering ved akutte stressreaktioner i forbindelse med voldsomme hændelser samt kurser i afholdelse af psykologisk debriefing (...)</p>
   <div class="logoydelse">
   <div class="prisektion">
   <h4>Pris og omfang: aftales individuelt/</h4>
@@ -114,10 +114,13 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
   </section>
 
   <style>
+    /******************** Desktop *********************/
+    /******************** title *********************/
     h1{
         text-align: center;
        
     }
+    /******************** Hele grid*********************/
 .grid-cards{
    display: grid;
    grid-template-columns: repeat(4, 1fr);
@@ -126,7 +129,7 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
    row-gap: 5rem;  
 }
 
-
+/******************** Grid bokse(uden border) *********************/
 .grid-card{
     background-color:var(--color-section_accent);
     color: var(--color-text-light);
@@ -138,6 +141,7 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
     padding-bottom:1rem;
    
    }
+   /******************** Inviduel terapi(med border)*********************/
 .radius-card{
      border-radius: 55px 0 0;
          background-color:var(--color-section_accent);
@@ -149,6 +153,7 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
     padding-bottom:1rem;
          
 }
+/******************** Inviduel supervision(med border) *********************/
 .radius-card1{
       color: var(--color-text-light);
          padding: 10px; 
@@ -161,6 +166,7 @@ import YdelserFamilieopstilling from "../assets/familieopstilling.png";
       padding-bottom:1rem;
   
 }
+/******************** Knapperne *********************/
 button{
     background-color: var(--color-CTA);
 color: var(--color-bg);
@@ -172,7 +178,7 @@ position: absolute;
     left: 0;
     width: 100%;
 }
-
+/******************** Ydelser billeder og pris *********************/
 img {
 display: block;
     max-width: 120px;
@@ -185,31 +191,31 @@ display: block;
    align-items:flex-end;
    gap:1rem;
 }
-
+/******************** Mobil *********************/
+/******************** Hele grid*********************/
 @media (max-width: 768px) {
    .grid-cards{
    grid-template-columns: 1fr;
      gap:1rem;
      row-gap: 4rem;
     }
-    
+    /******************** Grid bokse(uden border) *********************/
 .grid-card{
     background-color:var(--color-section_accent);
     color: var(--color-text-light);
 border-radius: 5px;
    max-width:350px;
    justify-items: center;
-   
    }
+   /******************** Inviduel terapi(med border)*********************/
 .radius-card{
      border-radius: 40px 0 0;
          background-color:var(--color-section_accent);
            color: var(--color-text-light);
        max-width:350px;
      justify-items: center;
-  
-         
-}
+  }
+  /******************** Inviduel supervision(med border) *********************/
 .radius-card1{
       color: var(--color-text-light);
        
@@ -219,16 +225,7 @@ border-radius: 5px;
   max-width:350px;
    justify-items: center;
 }
-.radious-card-mobil{
- color: var(--color-text-light);
-         padding: 5px; 
-          border-radius: 0 60px 0 0;
-          background-color:var(--color-section_accent);
-          color: var(--color-text-light);
-           position: relative;
-              display: flex;
-    flex-direction: column;
-}
+/******************** Knapperne*********************/
 button{
     background-color: var(--color-CTA);
 color: var(--color-bg);
@@ -240,18 +237,11 @@ position: absolute;
     left: 0;
     width: 100%;
 }
-.pris{
-  margin-top: 5px;
-  margin-bottom: 1rem;
-
-}
+/******************** Ydelser billeder og pris *********************/
 img {
   
      margin-top: auto;
   display: block;
- 
-    
+ }
 }
-}
-
 </style>

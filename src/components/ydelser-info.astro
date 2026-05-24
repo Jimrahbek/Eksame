@@ -27,7 +27,7 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 <Image class="Annelou" src={YdelserAnneLou} alt="Anne Louise" width="550" height="400" style="border-radius: 5px 5px 60px 5px;" format="webp"/>
  </section>
  <div class="logotekst">
-    <div class="locationoglaptop">
+    <div class="iconsogtekst">
   <Image src={YdelserLocation} alt="Location" format="webp"/>
   <Image src={YdelserLaptop} alt="Laptop" format="webp"/>
   </div>
@@ -41,56 +41,58 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 </div>
   
 <style>
+    /******************** Desktop*********************/
+    /******************** Hele griddet *********************/
 .grid-ydelser-info{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     padding: 2rem;
     margin: 2rem auto;
    alin-items:center;
-  
-}
+  }
+/******************** Den grå boks(wrapper)*********************/
 .grid-boks{
     background-color:var(--color-section_accent);
     color: var(--color-text-light);
          border-radius:5px 5px 5px 60px;
          width:600px;
-         
-         
          }
-
-
+/******************** Flexbox til logobilleder og tekst under den grå boks *********************/
     .logotekst{
     display: flex;
     gap:1rem;
     align-items: flex-start;
    justify-content: center;
-  
-}
-
+  }
+/******************** Betaling overskrift *********************/
 .tilskud-boks{
     padding: 1rem;
 }
+/******************** Betaling overskrift *********************/
 .betalings-boks{
      padding: 1rem;
 }
+/******************** Ydelig  *********************/
 .information-boks{
     padding: 1rem;
 }
-
+/******************** Betaling overskrift *********************/
 .betaling{
     font-weight: bold;
     
 }
+/******************** Betaling overskrift *********************/
 .tilskud{
     font-weight: bold;
 }
-
+/******************** Tekst ved logobilleder *********************/
 .onelineogfysisk{
     padding:5px;
     margin-right: 3rem;
 }
-
+/******************** Mobil*********************/
+/******************** Hele griddet *********************/
  @media (max-width: 768px) {
 .grid-ydelser-info{
     display: grid;
@@ -101,43 +103,30 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
     padding-top: 2rem;
      justify-items: center;
   }
+  /******************** Den grå boks(wrapper)*********************/
  .grid-boks{
     background-color:var(--color-section_accent);
     color: var(--color-text-light);
          border-radius:60px  5px 5px 5px;
          width:300px;
         padding: 5px;
-       
-      
-           }
-
-
+       }
+/******************** Gridbox(på desktop en flexbox) til logobilleder og tekst under den grå boks *********************/
 .logotekst{
-    display: flex;
-  gap:1rem;
-  flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+   justify-items: center;
+   padding:2rem;
+   }
+/******************** Tekst ved logobilleder *********************/
+.onelineogfysisk{
+margin-left: 3rem;
 }
-
+/******************** Billede af Anne Louise i mobil *********************/
 .Annelou{
     width:300px;
     height:auto;
-  
+  }
 }
-
-
-
-
-}
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  </style>
