@@ -24,7 +24,7 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 <p>Mange privatpersoner og arbejdspladser har forskellige forsikringsordninger, som giver tilskud til psykolog behandling. Undersøg derfor, hvilke vilkår dit forsikringsselskab har, når du selv vælger en autoriseret privatpraktiserende psykolog</p>
 </div>
 </div>
-<Image class="annelou" src={YdelserAnneLou} alt="Anne Louise" width="550" height="400" style="border-radius: 5px 5px 60px 5px;" format="webp"/>
+<Image class="Annelou" src={YdelserAnneLou} alt="Anne Louise" width="550" height="400" style="border-radius: 5px 5px 60px 5px;" format="webp"/>
  </section>
  <div class="logotekst">
     <div class="locationoglaptop">
@@ -33,13 +33,10 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
   </div>
   <p class="onelineogfysisk">Online og fysisk</p>
 <Image src={YdelserBehov} alt="Location" format="webp"/>
-  <p>Tilpasset dine behov
+  <p class="onelineogfysisk">Tilpasset dine behov</p>
 
-</p>
-<Image src={YdelserSikkerhed} alt="Location" format="webp"/>
-  <p>Trygt samtalerum
-
-</p>
+  <Image src={YdelserSikkerhed} alt="Location" format="webp"/>
+  <p class="onelineogfysisk">Trygt samtalerum</p>
 
 </div>
   
@@ -47,10 +44,10 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
 .grid-ydelser-info{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 5rem;
-    margin: 2rem;
-    padding-top: 0.3rem;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 2rem auto;
+   alin-items:center;
   
 }
 .grid-boks{
@@ -58,13 +55,17 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
     color: var(--color-text-light);
          border-radius:5px 5px 5px 60px;
          width:600px;
+         
+         
          }
 
-.logotekst{
+
+    .logotekst{
     display: flex;
-    gap:3rem;
+    gap:1rem;
     align-items: flex-start;
    justify-content: center;
+  
 }
 
 .tilskud-boks{
@@ -98,27 +99,30 @@ Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
     padding: 0;
     margin: 0;
     padding-top: 2rem;
+     justify-items: center;
   }
  .grid-boks{
     background-color:var(--color-section_accent);
     color: var(--color-text-light);
          border-radius:60px  5px 5px 5px;
-         width:270px;
+         width:300px;
         padding: 5px;
+       
       
            }
 
-.annelou{
-    width: 300px;
-    height: auto;
-}
+
 .logotekst{
     display: flex;
   gap:1rem;
-   flex-direction: column;
- 
+  flex-direction: column;
 }
 
+.Annelou{
+    width:300px;
+    height:auto;
+  
+}
 
 
 

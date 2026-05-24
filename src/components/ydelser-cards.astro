@@ -1,5 +1,5 @@
  ---
-import { Image } from 'astro:assets';
+ import { Image } from 'astro:assets';
 import YdelserInviduel from "../assets/inviduelterapi.png";
 import YdelserParteripi from "../assets/parterapi.png";
 import YdelserFamilieterapi from "../assets/familieterapi.png";
@@ -190,23 +190,23 @@ display: block;
    .grid-cards{
    grid-template-columns: 1fr;
      gap:1rem;
-     row-gap: 3rem;
-      padding: 0.5rem;
-  }
+     row-gap: 4rem;
+    }
+    
 .grid-card{
     background-color:var(--color-section_accent);
     color: var(--color-text-light);
-
-   border-radius: 5px;
-  
+border-radius: 5px;
+   max-width:350px;
+   justify-items: center;
    
    }
 .radius-card{
      border-radius: 40px 0 0;
          background-color:var(--color-section_accent);
            color: var(--color-text-light);
-       
-    
+       max-width:350px;
+     justify-items: center;
   
          
 }
@@ -216,7 +216,8 @@ display: block;
           background-color:var(--color-section_accent);
           color: var(--color-text-light);
    border-radius: 0;
-  
+  max-width:350px;
+   justify-items: center;
 }
 .radious-card-mobil{
  color: var(--color-text-light);
