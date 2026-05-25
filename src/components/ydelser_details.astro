@@ -13,18 +13,13 @@ const { ydelse } = Astro.props;
             <p><strong>Metode:</strong> {ydelse.metode}</p>
 
             <article class="ydelser-details-pris-wapper">
+
                <div class="ydelser-details-pris">
-
-
           {ydelse.show_price ? (
-              <p>
-                <strong>Pris:</strong> {ydelse.tid} pr. session {ydelse.pris}kr.
-              </p>
+            <p> <strong>Pris:</strong> {ydelse.tid} minutter pr. session á {ydelse.pris}kr. </p>
             ) : (
-              <p>
-                <strong>Pris:</strong> aftales individuelt.
-              </p> )}
-
+            <p> <strong>Pris:</strong> aftales individuelt.</p>
+            )}
               </div>
              
               <button class="btn"><a href="src/components/booking.astro"><h4>Gå til booking</h4></a></button>
@@ -33,7 +28,7 @@ const { ydelse } = Astro.props;
           </article>
           </article>
 
-          <div class="ydelser-details-billed"><img src={`/src/assets/ydesler_img/${ydelse.id}.webp`} alt="Billede af terapeut, der arbejder med en kunde" /></div>
+          <div class="ydelser-details-billed"><img src={`/src/assets/ydesler_img/${ydelse.id}.webp`} alt="{ydelse.alttext}" /></div>
         </section>
 
 
