@@ -14,25 +14,25 @@
       </article>
       <div class="container">
         <div class="fulde_navn">
-          <label for="fulde_navn">Fulde navn:</label>
+          <label for="fulde_navn">*Fulde navn:</label>
           <input id="fulde_navn" name="fulde_navn" type="text" required />
         </div>
         <div class="pronominer">
-          <label for="pronominer">Pronominer:</label>
+          <label for="pronominer">*Pronominer:</label>
           <input id="pronominer" name="pronominer" type="text" required />
         </div>
         <div class="tlf_nr">
-          <label for="tlf_nr">Tlf. nr.:</label>
+          <label for="tlf_nr">*Tlf. nr.:</label>
           <input id="tlf_nr" name="tlf_nr" type="text" required />
         </div>
         <div class="mailadresse">
-          <label for="mailadresse">Mailadresse:</label>
+          <label for="mailadresse">*Mailadresse:</label>
           <input id="mailadresse" name="mailadresse" type="text" required />
         </div>
       </div>
-      <label for="info">Information:</label>
+      <label for="info">*Information:</label>
       <textarea id="info" name="info" rows="15" cols="33" required></textarea>
-      <button type="submit" class="button">Indsend</button>
+      <button type="submit" class="btn">Indsend</button>
     </fieldset>
   </form>
 </section>
@@ -40,8 +40,7 @@
 <style>
   .h1 {
     text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    color: var(--color-text);
   }
   h2 {
     color: var(--color-text-light);
@@ -65,11 +64,13 @@
     margin-left: 7vw;
     margin-right: 7vw;
     margin-bottom: 7rem;
+    margin-inline: auto;
     padding: 3rem;
     border-style: none;
     background-color: var(--color-section_accent);
     border-radius: 5px 50px;
     width: fit-content;
+    align-items: center;
   }
   .fieldset {
     border-style: none;
@@ -87,27 +88,24 @@
     height: 30px;
   }
   input:user-invalid {
-    background-color: var(--color-CTA);
-    border-style: none;
+    border: 3px solid rgb(192, 23, 23);
     border-radius: 5px;
   }
   textarea {
     background-color: var(--color-section_bg);
     border-style: none;
     border-radius: 5px;
+    resize: none;
+  }
+  textarea:user-invalid {
+    border: 3px solid rgb(192, 23, 23);
+    border-radius: 5px;
   }
   #info {
     height: 80px;
   }
-  .button {
-    margin-top: 1rem;
-    border-style: none;
-    border-radius: 5px 50px;
-    height: 30px;
-    font-family: "Quicksand", sans-serif;
-    font-size: 20px;
-    color: var(--color-text-light);
-    background-color: var(--color-CTA);
+  .btn{
+     margin-top: 1rem;
   }
   @media (min-width: 768px) {
     .container {

@@ -11,41 +11,52 @@ import adresse2 from "../assets/adresse2.png";
 
 <div class="grid_1-1">
     <div>
-        <img src={adresse1.src} alt="">
+        <img src={adresse1.src} alt="Lokalation">
     </div>
     <div class="psykologhuset">
-        <a href="https://www.google.com/maps/place/N%C3%B8rre+Voldgade+21,+3.+Sal,+1358+K%C3%B8benhavn/@55.683961,12.5695261,17z/data=!3m1!4b1!4m6!3m5!1s0x46525305303b8dc9:0x6ddada7e15526ae!8m2!3d55.683961!4d12.572101!16s%2Fg%2F11ll_z2283?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D" class="h2_pad">
+        <a href="https://www.google.com/maps/place/N%C3%B8rre+Voldgade+21,+3.+Sal,+1358+K%C3%B8benhavn/@55.683961,12.5695261,17z/data=!3m1!4b1!4m6!3m5!1s0x46525305303b8dc9:0x6ddada7e15526ae!8m2!3d55.683961!4d12.572101!16s%2Fg%2F11ll_z2283?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D" class="h2_pad" target="_blank">
         <h2 >Psykologhuset Trekanten</h2>
         <h2 >Nørre Voldgade 21, 3. sal</h2>
         <h2>1358 København K</h2>
         </a>
         <p class="text_width1">I hjertet af indre by, med plads forsorgning, ro, og . Denne cantale placering giver nem adgagng med offentlig transport</p>
         
+        <p class="pad">(Klik på overskriften få at komme til Google Maps)</p>
     </div>
 </div>
 
 
 <div class="grid">
     <div class="nordre">
-        <a href="https://www.google.com/maps/place/Ndr+Engvej+5,+2791+Drag%C3%B8r/@55.5971478,12.6656355,17z/data=!3m1!4b1!4m6!3m5!1s0x4653abb23f7fbd33:0x3ffd4c87918777d9!8m2!3d55.5971478!4d12.6682104!16s%2Fg%2F11c4j8zyg_?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D" class="h2_pad">
+        <a href="https://www.google.com/maps/place/Ndr+Engvej+5,+2791+Drag%C3%B8r/@55.5971478,12.6656355,17z/data=!3m1!4b1!4m6!3m5!1s0x4653abb23f7fbd33:0x3ffd4c87918777d9!8m2!3d55.5971478!4d12.6682104!16s%2Fg%2F11c4j8zyg_?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D" class="h2_pad" target="_blank">
         <h2>Nordre Engvej 5,</h2>
         <h2>2791 Dragør</h2>
         </a>
-        <p class="text_width">I hjertet af indre by, med plads forsorgning, ro, og . Denne cantale placering giver nem adgagng med offentlig transport</p>
+        <p class="text_width">Dette lokale ligger i underetagen af min egen bolig på adressen, Grundet lokalets lokation, føles det roligt og privat, med lidt afstand til resten af boligen.</p>
     </div>
         <div>
-        <img src={adresse2.src} alt="">
+        <img src={adresse2.src} alt="Billede af lokalation">
     </div>
+</div>
+<div class="kontakt">
+    <h2>Kontakt informationer</h2>
+    <p>Mail: alh@husettrekanten.dk</p>
+    <p>Telf nr.: +45 21971464 </p>
 </div>
 </div>
   <style>
+.pad{
+    padding-top: 80px;
+}
+
 .padding{
     padding-top: 20px;
 }
 
 .adresser,
 .psykologhuset,
-.nordre {
+.nordre,
+.kontakt {
     background-color: var(--color-section_accent);
     padding: 18px 28px;
     color: #FFFFFF;
@@ -66,6 +77,12 @@ import adresse2 from "../assets/adresse2.png";
 
 .nordre {
     border-radius: 5px 5px 5px 50px;
+}
+
+.kontakt {
+    border-radius: 5px 5px 50px 5px;
+    margin-bottom: 1rem;
+    margin-left: auto;
 }
 
 .grid_1-1,
@@ -114,10 +131,11 @@ img {
 }
 
 /* Mobile */
-@media (max-width: 900px) {
+@media (max-width: 768px)  {
     .grid_1-1,
     .grid {
-        grid-template-columns: 1fr;
+               display: grid;
+    grid-template-columns: 1fr;
     }
 
     .adresser,
