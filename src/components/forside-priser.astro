@@ -5,24 +5,26 @@ import Plant from "../assets/plant.png";
  ---
  <div class="align">
 <h2>Priser og ydelser</h2>
-<p>Her finder du et overblik over de områder, jeg arbejder med. Jeg tilpasser altid forløbet til dine behov og din situation, så du får et trygt og meningsfuldt udgangspunkt for forandring. Sammen arbejder vi med det, der fylder, i et tempo der passer til dig.</p>
+<p class="p">Her finder du et overblik over de områder, jeg arbejder med. Jeg tilpasser altid forløbet til dine behov og din situation, så du får et trygt og meningsfuldt udgangspunkt for forandring. Sammen arbejder vi med det, der fylder, i et tempo der passer til dig.</p>
 </div>
 <div class="grid_1-1-1">
 <div>
     <p>Tryg og fortrolig ramme</p>
-    <img src={Hand.src} alt="">
+    <img src={Hand.src} alt="Hånd logo">
 </div>
 <div>
     <p>Individuelt tilpassede forløb</p>
-    <img src={Target.src} alt="">
+    <img src={Target.src} alt="Target logo">
 </div>
 <div>
     <p>Fokus på din udvikling</p>
-    <img src={Plant.src} alt="">
+    <img src={Plant.src} alt="Plant logo">
  </div>
 </div>
 <div class="align_btn">
+    <a href="/ydelser">
 <button class="btn" >Læs mere om mine tilbud</button>
+</a>
 </div>
   <style>
 .align{
@@ -48,5 +50,25 @@ padding-top: 5px;
 
 .btn{
     width: 550px;
+}
+
+h2{
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.p{
+  max-width: 65ch;
+ margin: 0 auto;
+ text-align: left;
+}
+@media (max-width: 768px) {
+  .grid_1-1-1{
+        display: grid;
+    grid-template-columns: 1fr;
+  }
+    .btn{
+    width: 300px;
+  }
 }
  </style>

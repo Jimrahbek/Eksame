@@ -7,40 +7,40 @@ import logo from "../assets/logo.webp";
 
 const { title } = Astro.props;
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="da">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robot" content="noindex, nofollow" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
     <title>{title}</title>
   </head>
   <body>
- <header>
-                                  <div class="logo">
-            <a href="/">
-                <img src={logo.src} alt="Logo">
-            </a>
-        </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Forside</a></li>
-                <li><a href="/ydelser">Ydelser og priser</a></li>
-                <li><a href="/om_mig">Om mig</a></li>
-                <li><a href="/booking">Booking</a></li>
-            </ul>
-            <button class="burger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-
-        </nav>
+    <header>
+      <div class="logo">
+        <a href="/">
+          <img src={logo.src} alt="Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="/ydelser">Ydelser og priser</a></li>
+          <li><a href="/om_mig">Om mig</a></li>
+          <li><a href="/booking">Booking</a></li>
+        </ul>
+        <button class="burger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </nav>
     </header>
 
     <main>
@@ -48,33 +48,33 @@ const { title } = Astro.props;
     </main>
 
     <footer>
-        <div class="footer_adresse">
-      <h3>Lokationer</h3>
-      <p>Nordre Engvej 5, kælder</p>
-      <p>2791 Dragør</p>
+      <div class="footer_adresse">
+        <h3>Lokationer</h3>
+        <p>Nordre Engvej 5, kælder</p>
+        <p>2791 Dragør</p>
 
-      <p class="footer_tekst_pad">Psykologhuset Trekanten</p>
-      <p>Nørre Voldgade 21, 3.sal</p>
-      <p>1358 København K</p>
+        <p class="footer_tekst_pad">Psykologhuset Trekanten</p>
+        <p>Nørre Voldgade 21, 3.sal</p>
+        <p>1358 København K</p>
       </div>
 
-     <div class="footer_social_media">
-    <h3>Find mig her</h3>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/psyk.a.louise_hjort/">
-            <img src={instagram.src} alt="Instagram" class="social-icon">
-        </a>
-        <a href="#">
-            <img src={facebook.src} alt="Facebook" class="social-icon">
-        </a>
-    </div>
-</div>
+      <div class="footer_social_media">
+        <h3>Find mig her</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/psyk.a.louise_hjort/">
+            <img src={instagram.src} alt="Instagram" class="social-icon" />
+          </a>
+          <a href="#">
+            <img src={facebook.src} alt="Facebook" class="social-icon" />
+          </a>
+        </div>
+      </div>
 
       <div class="footer_mail">
-      <h3>Kontakt</h3>
-      <p>alh@husettrekanten.dk</p>
-      <p>+45 21971464</p>
-      <p class="footer_tekst_pad"> CVR.nr. 43782541</p>
+        <h3>Kontakt</h3>
+        <p>alh@husettrekanten.dk</p>
+        <p>+45 21971464</p>
+        <p class="footer_tekst_pad">CVR.nr. 43782541</p>
       </div>
     </footer>
   </body>
