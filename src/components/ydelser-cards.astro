@@ -24,23 +24,23 @@ console.log(ydelser);
   <article class="radius-card">
     <h4>{ydelse.titel}</h4>
     <p>{ydelse.info}</p>
-      <div class="pris">
-          {ydelse.show_price ? (
-            <p> <strong>Pris:</strong> {ydelse.tid} minutter pr. session á {ydelse.pris}kr. </p>
-            ) : (
-            <p> <strong>Pris:</strong> aftales individuelt.</p>
-            )}
-        
 
-            <div class="ydelser-details-billed"><img src={`/src/assets/ydelser_icon/${ydelse.id}.png
-              `} /></div>
-        </div>
+    <div class="ydelser-details-pris-wapper">
+          <div class="pris">
+            {ydelse.show_price ? (
+              <p> <strong>Pris:</strong> {ydelse.tid} minutter pr. session á {ydelse.pris}kr. </p>
+              ) : (
+              <p> <strong>Pris:</strong> aftales individuelt.</p>
+              )}
+          </div>
+    <div class="ydelser-details-billed"><img src={`/src/assets/ydelser_icon/${ydelse.id}.png`} /></div>
+       
+
   <a href={`/ydelser/${ydelse.slug}`}>
       <button><p>Læs mere</p></button></a>
-
+ </div>
  </article>
 ))}
-
 
 </section>
 
@@ -48,93 +48,123 @@ console.log(ydelser);
   
 
   <style>
-    h1{
-        text-align: center;
-        padding: 5rem;
-    }
+
+
+/***************** overskrift ***********************/
+h1{
+text-align: center;
+padding: 5rem;
+}
 
 .grid-cards{
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap:2rem;
-   padding: 3rem;
-   row-gap: 5rem;
-   
-   
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap:2rem;
+padding: 3rem;
+row-gap: 5rem; 
 }
 
 .radius-card p{
-  color: var(--color-text-light);
+color: var(--color-text-light);
 }
 
 .grid-card{
-    background-color:var(--color-section_accent);
-    color: var(--color-bg);
- padding: 5px;
-   border-radius: 5px;
-    position: relative;
-      display: flex;
-    flex-direction: column;
-   
-   }
+background-color:var(--color-section_accent);
+color: var(--color-bg);
+padding: 5px;
+border-radius: 5px;
+position: relative;
+display: flex;
+flex-direction: column;
+}
+
+@media (min-width: 769px) {
+.grid-card first-child {
+  border-radius: 50px 5px 5px 5px;
+}
+  .grid-card:nth-child(4) {
+    border-radius: 5px 50px 5px 5px;
+}
+.grid-card:nth-child(5) {
+  border-radius: 5px 5px 50px 5px;
+}
+.grid-card last-child {
+  border-radius: 5px 5px 5px 50px;
+}
+}
 .radius-card{
-     border-radius: 10px 0 0;
-         background-color:var(--color-section_accent);
-           color: var(--color-bg);
-         padding: 5px;
-          position: relative;
-           display: flex;
-    flex-direction: column;
-        
+border-radius: 10px 0 0;
+background-color:var(--color-section_accent);
+color: var(--color-bg);
+padding: 5px;
+position: relative;
+display: flex;
+flex-direction: column;      
 }
 
 
 .radius-card1{
-      color: var(--color-text-light);
-         padding: 5px; 
-          border-radius: 0 20px 0 0;
-          background-color:var(--color-section_accent);
-          color: var(--color-bg);
-           position: relative;
-              display: flex;
-    flex-direction: column;
+color: var(--color-text-light);
+padding: 5px; 
+border-radius: 0 20px 0 0;
+background-color:var(--color-section_accent);
+color: var(--color-bg);
+position: relative;
+display: flex;
+flex-direction: column;
 }
 
+
+
+/****************** pris og booking ****************/    
+.ydelser-details-pris-wapper {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+margin-top: auto;
+padding: 1rem;
+border-radius: 5px 5px 5px 50px;
+align-items: center;
+}
+
+.pris{
+margin-top: 5px;
+margin-bottom: 1rem;
+}
+
+
 button{
-    background-color: var(--color-CTA);
+background-color: var(--color-CTA);
 color: var(--color-bg);
 padding: 5px;
 border-radius: 5px;
 border-style: none;
 position: absolute;
-    bottom: -40px;
-    left: 0;
-    width: 100%;
+bottom: -40px;
+left: 0;
+width: 100%;
 }
-.pris{
-  margin-top: 5px;
-  margin-bottom: 1rem;
-
-}
+/*********************** icon ***********************/
 .ydelser-details-billed img {
-    margin-left: auto;
-     margin-top: auto;
-    margin-bottom: 0.1rem;
-    margin-right: 0.1rem;
-    display: block;  
+margin-left: auto;
+margin-top: auto;
+margin-bottom: 0.1rem;
+margin-right: 0.1rem;
+display: block;  
 }
 
 @media (max-width: 768px) {
-  .grid-cards{
-     grid-template-columns: 1fr;
-     gap:2rem;
-  }
+.grid-cards{
+grid-template-columns: 1fr;
+gap:2rem;
+}
+
 .grid-card{
-    background-color:var(--color-section_accent);
-    color: var(--color-bg);
- padding: 18px;
-   border-radius: 5px;
-   }
+background-color:var(--color-section_accent);
+color: var(--color-bg);
+padding: 18px;
+border-radius: 5px;
+position: relative;}
 }
 
 
