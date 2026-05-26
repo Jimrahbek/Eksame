@@ -1,5 +1,4 @@
- ---
-
+---
 import Hero from "../assets/forsideHero.png";
  ---
   <h1 class="velkommen">Velkommen</h1>
@@ -17,24 +16,30 @@ import Hero from "../assets/forsideHero.png";
   <img src={Hero.src} alt="Billede af Anne Louise">
 </div>
 </div>
-   <style>
-.hero_grid{
-      display: grid;
+<style>
+  .hero_grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
     padding-top: 30px;
     padding-bottom: 30px;
-}
-.velkommen{
-  padding-top: 40px;
-  padding-bottom: 30px;
-  text-align: center;
-}
+  }
+  .herosektion {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
 
-.btn{
-  padding-left: 100px;
-  padding-right: 100px;
-}
+  .velkommen {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  .btn {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 
 .text_pad{
   padding-top: 20px;
