@@ -1,57 +1,26 @@
 ---
 import Hero from "../assets/forsideHero.png";
----
-
-<h1 class="velkommen">Velkommen</h1>
-<div class="hero_grid">
-  <div>
-    <!-- <h2>Psykolog</h2>
-    <h2>Anne Louise Hjort</h2>
-    <p>
-      Mit navn er Anne Louise Hjort (hun/hende), og jeg er psykolog, med lokaler
-      i Københavsområdet. Som erfaren krisepsykolog ved jeg, hvor hjælpsomt det
-      er for mennesker i affekt, at jeg som psykolog kan skabe ro i deres
-      nervesystem og tryghed gennem tydelighed og struktur.
-    </p>
-    <p class="text_pad">
-      Med flere uddannelser inden for pædagogik og psykologi er jeg trænet i at
-      tale med såvel børn og unge som voksne.
-    </p>
-    <a href="/booking"> -->
-    <!-- <button class="btn">Kontakt mig her</button>
-    </a> -->
-    <div class="herosektion">
-      <div class="heading-group">
-        <h2>Psykolog</h2>
-        <h2>Anne Louise Hjort</h2>
-      </div>
-
-      <p>
-        Mit navn er Anne Louise Hjort (hun/hende), og jeg er psykolog, med
-        lokaler i Københavsområdet. Som erfaren krisepsykolog ved jeg, hvor
-        hjælpsomt det er for mennesker i affekt, at jeg som psykolog kan skabe
-        ro i deres nervesystem og tryghed gennem tydelighed og struktur.
-      </p>
-
-      <p class="text_pad">
-        Med flere uddannelser inden for pædagogik og psykologi er jeg trænet i
-        at tale med såvel børn og unge som voksne.
-      </p>
-
-      <a href="/booking">
-        <button class="btn">Kontakt mig her</button>
-      </a>
-    </div>
-  </div>
-  <div>
-    <img src={Hero.src} alt="" />
-  </div>
+ ---
+  <h1 class="velkommen">Velkommen</h1>
+ <div class="hero_grid">
+ <div>
+<h2>Psykolog</h2>
+<h2>Anne Louise Hjort</h2>
+<p>Mit navn er Anne Louise Hjort (hun/hende), og jeg er psykolog, med lokaler i Københavsområdet. Som erfaren krisepsykolog ved jeg, hvor hjælpsomt det er for mennesker i affekt, at jeg som psykolog kan skabe ro i deres nervesystem og tryghed gennem tydelighed og struktur.</p>
+<p class="text_pad">Med flere uddannelser inden for pædagogik og psykologi er jeg trænet i at tale med såvel børn og unge som voksne.</p>
+<a href="/booking">
+<button class="btn">Kontakt mig her</button>
+</a>
+</div>
+<div>
+  <img src={Hero.src} alt="Billede af Anne Louise">
+</div>
 </div>
 <style>
   .hero_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 200px;
+    gap: 100px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -72,8 +41,54 @@ import Hero from "../assets/forsideHero.png";
     padding-right: 100px;
   }
 
-  .text_pad {
-    padding-top: 20px;
+.text_pad{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+
+  .hero_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    padding: 0 25px 40px 25px;
+    box-sizing: border-box;
+  }
+
+  .hero_grid > div:first-child {
+    order: 2;
+    width: 100%;
+  }
+
+  .hero_grid > div:last-child {
+    order: 1;
+    width: 100%;
+  }
+
+  .hero_grid img {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    border-radius: 24px;
+    display: block;
+  }
+
+  /* Centrer indhold */
+  .hero_grid > div {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .velkommen {
+    text-align: center;
     padding-bottom: 20px;
   }
-</style>
+
+  h2 {
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+ </style>

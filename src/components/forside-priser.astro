@@ -10,15 +10,15 @@ import Plant from "../assets/plant.png";
 <div class="grid_1-1-1">
 <div>
     <p>Tryg og fortrolig ramme</p>
-    <img src={Hand.src} alt="">
+    <img src={Hand.src} alt="Hånd logo">
 </div>
 <div>
     <p>Individuelt tilpassede forløb</p>
-    <img src={Target.src} alt="">
+    <img src={Target.src} alt="Target logo">
 </div>
 <div>
     <p>Fokus på din udvikling</p>
-    <img src={Plant.src} alt="">
+    <img src={Plant.src} alt="Plant logo">
  </div>
 </div>
 <div class="align_btn">
@@ -50,5 +50,15 @@ padding-top: 5px;
 
 .btn{
     width: 550px;
+}
+
+@media (max-width: 768px) {
+  .grid_1-1-1{
+        display: grid;
+    grid-template-columns: 1fr;
+  }
+    .btn{
+    width: 300px;
+  }
 }
  </style>
