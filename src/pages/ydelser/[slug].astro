@@ -1,8 +1,7 @@
 ---
 import Layout from "../../layout/layout.astro";
 import YdelserDetails from "../../components/ydelser_details.astro";
-import YdelseInfo from "../../components/ydelser-info.astro";
-import YdelseBook from "../../components/ydelser-book.astro";
+
 
 
 type Ydelser = {
@@ -21,7 +20,7 @@ type Ydelser = {
 export async function getStaticPaths() {
   const res = await fetch(`${import.meta.env.PUBLIC_SUPABASE_URL}/rest/v1/anne-louise-hjort?select=*`, {
     headers: {
-      apikey: import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_KEY,
+    apikey: import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_KEY,
     },
   });
 
@@ -42,6 +41,4 @@ const { ydelse } = Astro.props;
 
 <Layout title={ydelse.titel}>
   <YdelserDetails ydelse={ydelse} />
-    <YdelseInfo />
-  <YdelseBook />
 </Layout>
