@@ -1,43 +1,79 @@
- ---
-
+---
 import Hero from "../assets/forsideHero.png";
- ---
-  <h1 class="velkommen">Velkommen</h1>
- <div class="hero_grid">
- <div>
-<h2>Psykolog</h2>
-<h2>Anne Louise Hjort</h2>
-<p>Mit navn er Anne Louise Hjort (hun/hende), og jeg er psykolog, med lokaler i Københavsområdet. Som erfaren krisepsykolog ved jeg, hvor hjælpsomt det er for mennesker i affekt, at jeg som psykolog kan skabe ro i deres nervesystem og tryghed gennem tydelighed og struktur.</p>
-<p class="text_pad">Med flere uddannelser inden for pædagogik og psykologi er jeg trænet i at tale med såvel børn og unge som voksne.</p>
-<a href="/booking">
-<button class="btn">Kontakt mig her</button>
-</a>
+---
+
+<h1 class="velkommen">Velkommen</h1>
+<div class="hero_grid">
+  <div>
+    <!-- <h2>Psykolog</h2>
+    <h2>Anne Louise Hjort</h2>
+    <p>
+      Mit navn er Anne Louise Hjort (hun/hende), og jeg er psykolog, med lokaler
+      i Københavsområdet. Som erfaren krisepsykolog ved jeg, hvor hjælpsomt det
+      er for mennesker i affekt, at jeg som psykolog kan skabe ro i deres
+      nervesystem og tryghed gennem tydelighed og struktur.
+    </p>
+    <p class="text_pad">
+      Med flere uddannelser inden for pædagogik og psykologi er jeg trænet i at
+      tale med såvel børn og unge som voksne.
+    </p>
+    <a href="/booking"> -->
+    <!-- <button class="btn">Kontakt mig her</button>
+    </a> -->
+    <div class="herosektion">
+      <div class="heading-group">
+        <h2>Psykolog</h2>
+        <h2>Anne Louise Hjort</h2>
+      </div>
+
+      <p>
+        Mit navn er Anne Louise Hjort (hun/hende), og jeg er psykolog, med
+        lokaler i Københavsområdet. Som erfaren krisepsykolog ved jeg, hvor
+        hjælpsomt det er for mennesker i affekt, at jeg som psykolog kan skabe
+        ro i deres nervesystem og tryghed gennem tydelighed og struktur.
+      </p>
+
+      <p class="text_pad">
+        Med flere uddannelser inden for pædagogik og psykologi er jeg trænet i
+        at tale med såvel børn og unge som voksne.
+      </p>
+
+      <a href="/booking">
+        <button class="btn">Kontakt mig her</button>
+      </a>
+    </div>
+  </div>
+  <div>
+    <img src={Hero.src} alt="" />
+  </div>
 </div>
-<div>
-  <img src={Hero.src} alt="">
-</div>
-</div>
-   <style>
-.hero_grid{
-      display: grid;
+<style>
+  .hero_grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 200px;
     padding-top: 30px;
     padding-bottom: 30px;
-}
-.velkommen{
-  padding-top: 40px;
-  padding-bottom: 30px;
-  text-align: center;
-}
+  }
+  .herosektion {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
 
-.btn{
-  padding-left: 100px;
-  padding-right: 100px;
-}
+  .velkommen {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
 
-.text_pad{
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
- </style>
+  .btn {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .text_pad {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+</style>
