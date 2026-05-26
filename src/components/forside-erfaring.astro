@@ -19,9 +19,9 @@ Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og arbe
 <button class="btn">Mere om min erfaring</button>
 </a>
 </div>
-<div>
-<img src={Forside_erfaring.src} alt="">
-</div>
+  <div class="order">
+    <img src={Forside_erfaring.src} alt="Anne sidder i en stol">
+  </div>
 </div>
 </div>
   <style>
@@ -70,5 +70,35 @@ padding-bottom: 30px;
 
        width: fit-content;
     margin-inline: auto;
+}
+
+.grid_1-1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .grid_1-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .order {
+    grid-row: 1;
+  }
+
+  .section_bg {
+    padding-inline: 20px;
+    overflow: hidden;
+  }
+
+  .text_witdh {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .grid_1-1 img {
+    width: 100%;
+    height: auto;
+  }
 }
  </style>

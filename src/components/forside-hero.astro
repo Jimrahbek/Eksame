@@ -14,14 +14,14 @@ import Hero from "../assets/forsideHero.png";
 </a>
 </div>
 <div>
-  <img src={Hero.src} alt="">
+  <img src={Hero.src} alt="Billede af Anne Louise">
 </div>
 </div>
    <style>
 .hero_grid{
       display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 200px;
+    gap: 100px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -39,5 +39,51 @@ import Hero from "../assets/forsideHero.png";
 .text_pad{
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+
+  .hero_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    padding: 0 25px 40px 25px;
+    box-sizing: border-box;
+  }
+
+  .hero_grid > div:first-child {
+    order: 2;
+    width: 100%;
+  }
+
+  .hero_grid > div:last-child {
+    order: 1;
+    width: 100%;
+  }
+
+  .hero_grid img {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    border-radius: 24px;
+    display: block;
+  }
+
+  /* Centrer indhold */
+  .hero_grid > div {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .velkommen {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    line-height: 1.2;
+  }
 }
  </style>
