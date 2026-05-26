@@ -21,7 +21,7 @@ import adresse2 from "../assets/adresse2.png";
         </a>
         <p class="text_width1">I hjertet af indre by, med plads forsorgning, ro, og . Denne cantale placering giver nem adgagng med offentlig transport</p>
         
-        <p>(Klik på overskriften få at komme til Google Maps)</p>
+        <p class="pad">(Klik på overskriften få at komme til Google Maps)</p>
     </div>
 </div>
 
@@ -38,15 +38,25 @@ import adresse2 from "../assets/adresse2.png";
         <img src={adresse2.src} alt="Billede af lokalation">
     </div>
 </div>
+<div class="kontakt">
+    <h2>Kontakt informationer</h2>
+    <p>Mail: alh@husettrekanten.dk</p>
+    <p>Telf nr.: +45 21971464 </p>
+</div>
 </div>
   <style>
+.pad{
+    padding-top: 80px;
+}
+
 .padding{
     padding-top: 20px;
 }
 
 .adresser,
 .psykologhuset,
-.nordre {
+.nordre,
+.kontakt {
     background-color: var(--color-section_accent);
     padding: 18px 28px;
     color: #FFFFFF;
@@ -67,6 +77,12 @@ import adresse2 from "../assets/adresse2.png";
 
 .nordre {
     border-radius: 5px 5px 5px 50px;
+}
+
+.kontakt {
+    border-radius: 5px 5px 50px 5px;
+    margin-bottom: 1rem;
+    margin-left: auto;
 }
 
 .grid_1-1,
