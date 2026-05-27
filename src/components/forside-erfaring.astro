@@ -1,109 +1,146 @@
- ---
-import Forside_erfaring from "../assets/forside-erfaring.png";
- ---
- <div class="section_bg">
-<h2 class="erfaring">Min erfaring</h2>
-<div class="text_witdh">
-<p>Jeg har opbygget bred erfaring fra både det offentlige og private, herunder arbejde med kriser, traumer og psykologisk rådgivning. Med baggrund fra blandt andet Forsvaret, politiet og kommunale tilbud møder jeg dig med solid faglighed og forståelse for komplekse livssituationer.</p>
-<p class="text_pad">
-Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og arbejde med det, der fylder – i et tempo, der passer til dig.</p>
-</div>
+---
+import Forside_erfaring from "../assets/inviduelterapi.png";
+---
 
-<div class="grid_1-1">
-<div class="box_h2">
-<h2>Faglig erfaring og uddannelse</h2>
-<h4 class="h4_pad">Krisepsykolog</h4>
-<h4 class="h4_pad">Autoriseret psykolog</h4>
-<h4 class="h4_pad">Specialist i klinisk psykologi samt godkendt supervisor</h4>
-<a href="/om_mig">
-<button class="btn">Mere om min erfaring</button>
-</a>
-</div>
-  <div class="order">
-    <img src={Forside_erfaring.src} alt="Anne sidder i en stol">
+<article class="section_bg">
+  <h2 class="erfaring">Min erfaring</h2>
+  <div class="text_witdh">
+    <p>
+      Jeg har opbygget bred erfaring fra både det offentlige og private,
+      herunder arbejde med kriser, traumer og psykologisk rådgivning. Med
+      baggrund fra blandt andet Forsvaret, politiet og kommunale tilbud møder
+      jeg dig med solid faglighed og forståelse for komplekse livssituationer.
+    </p>
+    <p class="text_pad">
+      Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og
+      arbejde med det, der fylder – i et tempo, der passer til dig.
+    </p>
   </div>
-</div>
-</div>
+
+  <article class="grid_1-1">
+    <section class="box_h2">
+      <h2>Faglig erfaring og uddannelse</h2>
+      <div class="h4_pad">
+        <div class="dippedut"></div><h4>Krisepsykolog</h4>
+      </div>
+      <div class="h4_pad">
+        <div class="dippedut"></div><h4>Autoriseret psykolog</h4>
+      </div>
+      <div class="h4_pad">
+        <div class="dippedut"></div><h4>
+          Specialist i klinisk psykologi samt godkendt supervisor
+        </h4>
+      </div>
+      <a href="/om_mig"> <button class="btn">Mere om min erfaring</button> </a>
+    </section>
+
+    <div class="order">
+      <img class="order_img" src={Forside_erfaring.src} alt="" />
+    </div>
+  </article>
+
   <style>
-.h4_pad{
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+    /*****************. Min erfaring og overordnet sektion ******************/
 
-.erfaring, .text_witdh{
-  color: white;
-}
-  
-.box_h2{
-  border-radius: 5px 5px 5px 50px;
-  padding: 18px 28px;
-  background-color: var(--color-section_bg);
-}
+    /*****************  Faglig erfaring og uddannelse ******************/
 
-.section_bg {
-  background-color: var(--color-section_accent);
-padding-bottom: 30px;
-  margin-inline: -100px;
-  
-}
+    .order_img {
+      float: right;
+    }
+    .dippedut {
+      width: 25px;
+      height: 25px;
+      background-color: var(--color-CTA);
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .h4_pad {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      display: flex;
+      align-items: center;
+    }
 
-.erfaring{
-  padding-top: 40px;
-  padding-bottom: 30px;
-  text-align: center;
-}
+    .erfaring,
+    .text_witdh {
+      color: var(--color-text-light);
+    }
 
-p{
-  max-width: 65ch;
- margin: 0 auto; 
-}
+    .box_h2 {
+      border-radius: 5px 5px 5px 50px;
+      padding: 18px 28px;
+      background-color: var(--color-section_bg);
+    }
 
-.text_pad{
-  padding-top: 20px;
-  padding-bottom: 50px;
-}
+    .section_bg {
+      background-color: var(--color-section_accent);
+      padding-bottom: 30px;
+      margin-inline: -100px;
+    }
 
-.text_witdh{
-    padding-left: 110px;
-    padding-right: 110px;
-}
+    .erfaring {
+      padding-top: 40px;
+      padding-bottom: 30px;
+      text-align: center;
+    }
 
-.grid_1-1{
-        display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    p {
+      max-width: 65ch;
+      margin: 0 auto;
+    }
 
-       width: fit-content;
-    margin-inline: auto;
-}
+    .order img {
+      max-width: 550px;
+      justify-content: left;
+      height: auto;
+      border-radius: 5px 50px 5px 5px;
+    }
+    .text_pad {
+      padding-top: 20px;
+      padding-bottom: 50px;
+    }
 
-.grid_1-1 img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-@media (max-width: 768px) {
-  .grid_1-1 {
-    grid-template-columns: 1fr;
-  }
+    .text_witdh {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
 
-  .order {
-    grid-row: 1;
-  }
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
-  .section_bg {
-    padding-inline: 20px;
-    overflow: hidden;
-  }
+      width: fit-content;
+      margin-inline: auto;
+    }
 
-  .text_witdh {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    .grid_1-1 img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .grid_1-1 {
+        grid-template-columns: 1fr;
+      }
 
-  .grid_1-1 img {
-    width: 100%;
-    height: auto;
-  }
-}
- </style>
+      .order {
+        grid-row: 1;
+      }
+
+      .section_bg {
+        padding-inline: 20px;
+        overflow: hidden;
+      }
+
+      .text_witdh {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .grid_1-1 img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</article>

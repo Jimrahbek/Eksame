@@ -1,33 +1,27 @@
 ---
 const { ydelse } = Astro.props;
 ---
+<div class="ydesler-details-titel"><h1>{ydelse.titel}</h1></div>
+<section class="ydelser-details-section">
 
+  <article class="ydelser-details-article">
+    <p>{ydelse.info}</p>
+    <p><strong>Metode:</strong> {ydelse.metode}</p>
+    <div  class="ydelser-details-pris-wapper">
 
-  <div class="ydesler-details-titel"><h1>{ydelse.titel} </h1> </div>
-        <section class="ydelser-details-section">
+      <div class="ydelser-details-pris">
+        {ydelse.show_price ? (
+        <p><strong>Pris:</strong> {ydelse.tid} minutter pr. session á {ydelse.pris}kr. </p>
+              ) : (
+        <p> <strong>Pris:</strong> aftales individuelt.</p>
+              )}
+      </div>
+        <a href="/booking"><button class="btn">Gå til booking</button></a>
+    </div>
+  </article>
 
-          <article class="ydelser-details-article">
-           <p>{ydelse.info} </p>
-            <p><strong>Metode:</strong> {ydelse.metode}</p>
-
-            <div  class="ydelser-details-pris-wapper">
-
-               <div class="ydelser-details-pris">
-          {ydelse.show_price ? (
-            <p> <strong>Pris:</strong> {ydelse.tid} minutter pr. session á {ydelse.pris}kr. </p>
-            ) : (
-            <p> <strong>Pris:</strong> aftales individuelt.</p>
-            )}
-              </div>
-             
-              <button class="btn"><a href="src/components/booking.astro"><h4>Gå til booking</h4></a></button>
-    
-        
-            </div>
-          </article>
-
-          <div class="ydelser-details-billed"><img src={`/src/assets/ydesler_img/${ydelse.id}.webp`} alt={ydelse.alttext} /></div>
-        </section>
+  <div class="ydelser-details-billed"><img src={`/src/assets/ydesler_img/${ydelse.id}.webp`} alt={ydelse.alttext} /></div>
+</section>
 
 
 <style>
