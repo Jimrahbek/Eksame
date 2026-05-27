@@ -3,43 +3,36 @@ const { ydelse } = Astro.props;
 ---
 
 
-  <div class="ydesler-details-titel">
-          <h1>{ydelse.titel} </h1>
-        </div>
-        
+  <div class="ydesler-details-titel"><h1>{ydelse.titel} </h1> </div>
         <section class="ydelser-details-section">
+
           <article class="ydelser-details-article">
-           <p>{ydelse.info}
+           <p>{ydelse.info} </p>
             <p><strong>Metode:</strong> {ydelse.metode}</p>
 
-            <article class="ydelser-details-pris-wapper">
+            <div  class="ydelser-details-pris-wapper">
+
                <div class="ydelser-details-pris">
-
-
           {ydelse.show_price ? (
-              <p>
-                <strong>Pris:</strong> {ydelse.tid} pr. session {ydelse.pris}kr.
-              </p>
+            <p> <strong>Pris:</strong> {ydelse.tid} minutter pr. session á {ydelse.pris}kr. </p>
             ) : (
-              <p>
-                <strong>Pris:</strong> aftales individuelt.
-              </p> )}
-
+            <p> <strong>Pris:</strong> aftales individuelt.</p>
+            )}
               </div>
              
               <button class="btn"><a href="src/components/booking.astro"><h4>Gå til booking</h4></a></button>
     
         
-          </article>
+            </div>
           </article>
 
-          <div class="ydelser-details-billed"><img src={`/src/assets/ydesler_img/${ydelse.id}.webp`} alt="Billede af terapeut, der arbejder med en kunde" /></div>
+          <div class="ydelser-details-billed"><img src={`/src/assets/ydesler_img/${ydelse.id}.webp`} alt={ydelse.alttext} /></div>
         </section>
 
 
 <style>
 
-/******************** title *********************/
+/******************** title ***********************/
   .ydesler-details-titel {
     display: flex;
     justify-content: center;
@@ -95,8 +88,10 @@ const { ydelse } = Astro.props;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: auto;
     padding: 1rem;
+    border-radius: 5px 5px 5px 50px;
+    align-items: center;
   }
 
   .ydelser-details-pris {
@@ -111,6 +106,7 @@ const { ydelse } = Astro.props;
     border-radius: 5px 50px 5px 50px;
     font-size: 1rem;
   }
+
 .btn a {
 color: var(--color-text-light);
 text-decoration: none;
