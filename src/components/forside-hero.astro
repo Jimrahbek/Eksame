@@ -1,102 +1,172 @@
 ---
 import Hero from "../assets/forsideHero.png";
 ---
-  <h1 class="velkommen">Velkommen</h1>
- <div class="hero_grid">
- <div>
-<h2>Psykolog</h2>
-<h2 class="h2">Anne Louise Hjort</h2>
-<p>Mit navn er Anne Louise Hjort (hun/hende), og jeg er psykolog, med lokaler i Københavsområdet. Som erfaren krisepsykolog ved jeg, hvor hjælpsomt det er for mennesker i affekt, at jeg som psykolog kan skabe ro i deres nervesystem og tryghed gennem tydelighed og struktur.</p>
-<p class="text_pad">Med flere uddannelser inden for pædagogik og psykologi er jeg trænet i at tale med såvel børn og unge som voksne.</p>
-<a href="/booking">
-<button class="btn">Kontakt mig her</button>
-</a>
-</div>
-<div>
-  <img src={Hero.src} alt="Billede af Anne Louise">
-</div>
-</div>
-<style>
-.hero_grid > div:last-child {
-  display: flex;
-  justify-content: center;
-}
 
-.h2{
-  padding-bottom: 40px;
-}
-  
+<div class="velkommen"><h1>Velkommen</h1></div>
+
+<article class="hero_grid">
+  <section class="herosektion_text">
+    <div class="under_overskirft">
+      <h2>Psykolog</h2>
+      <h2>Anne Louise Hjort</h2>
+    </div>
+
+    <div class="text">
+      <p>
+        Mit navn er Anne Louise Hjort (hun/hende), og jeg er psykolog, med
+        lokaler i Københavsområdet. Som erfaren krisepsykolog ved jeg, hvor
+        hjælpsomt det er for mennesker i affekt, at jeg som psykolog kan skabe
+        ro i deres nervesystem og tryghed gennem tydelighed og struktur.
+      </p>
+      <p>
+        Med flere uddannelser inden for pædagogik og psykologi er jeg trænet i
+        at tale med såvel børn og unge som voksne.
+      </p>
+    </div>
+
+    <div class="knap">
+      <a href="/booking">
+        <button class="btn endestation">Kontakt mig her</button></a
+      >
+    </div>
+  </section>
+
+  <div class="hero_img">
+    <img
+      src={Hero.src}
+      alt="Anne Louise smiler venligt og kigger direkte ind i kameraet. Hun har lyst hår, der er sat op i en knold, og hun har på en hvid bluse. Baggrunden er neutral og lys, hvilket fremhæver hendes venlige udstråling."
+    />
+  </div>
+</article>
+
+<style>
+  /*****************. overskrift ******************/
+  .velkommen {
+    text-align: center;
+  }
+
+  .under_overskirft {
+    padding-bottom: 40px;
+    justify-content: left;
+  }
+
+  /*****************  hero sektion ******************/
   .hero_grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     gap: 30px;
+    justify-content: center;
     padding-top: 30px;
+    padding-left: 25px;
     padding-bottom: 30px;
     margin: 0 auto;   
   }
-  .herosektion {
-    gap: 20px;
+
+  /*****************  teskt felt ******************/
+  .herosektion_text {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    /* gap: 120px; */
+    padding: 0 25px;
   }
 
-  .velkommen {
-    text-align: center;
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 550px;
+  }
+  /*****************  billeder ******************/
+
+  .hero_img {
+    display: grid;
+    justify-content: right;
+    align-items: bottom;
+    grid-column: 2 / 2;
   }
 
+  /* .hero_img img {
+    max-height: 550px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px 50px 5px 5px;
+  } */
+
+  .hero_img img {
+    max-height: 550px;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px 50px 5px 5px;
+  }
+
+  /*****************  CTA knap ******************/
   .btn {
     padding-left: 100px;
     padding-right: 100px;
+    justify-content: bottom;
   }
 
-.text_pad{
-  padding-top: 20px;
-  padding-bottom: 120px;
-}
-
-@media (max-width: 768px) {
-
-  .hero_grid {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-
-    padding: 0 25px 40px 25px;
-    box-sizing: border-box;
+  .knap {
+    padding: 5rem 5rem 0 0;
   }
 
-  .hero_grid > div:first-child {
-    order: 2;
-    width: 100%;
-  }
+  /*****************  CTA knap  & billed ******************/
+  /* .endestation {
+justify-content: bottom;
+align-items: bottom;
+}  */
 
-  .hero_grid > div:last-child {
-    order: 1;
-    width: 100%;
-  }
+  /* .hero_grid .> div:last-child {
+display: flex;
+justify-content: bottom;
+} */
 
-  .hero_grid img {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    border-radius: 24px;
-    display: block;
-  }
+  @media (max-width: 768px) {
+    .hero_grid {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin: 0 1rem;
+      /* padding: 0 25px 40px 25px; */
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  /* Centrer indhold */
-  .hero_grid > div {
-    max-width: 320px;
-    margin: 0 auto;
-  }
+    .hero_grid > div:first-child {
+      order: 2;
+      width: 100%;
+    }
 
-  .velkommen {
-    text-align: center;
-    padding-bottom: 20px;
-  }
+    .hero_grid > div:last-child {
+      order: 1;
+      width: 100%;
+    }
 
-  h2 {
-    text-align: center;
-    line-height: 1.2;
+    .hero_grid img {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      border-radius: 24px;
+      display: block;
+    }
+
+    /* Centrer indhold */
+    .hero_grid > div {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    .velkommen {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      line-height: 1.2;
+    }
   }
-}
- </style>
+</style>

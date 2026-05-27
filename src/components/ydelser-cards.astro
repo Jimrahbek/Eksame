@@ -1,247 +1,178 @@
- ---
- import { Image } from 'astro:assets';
-import YdelserInviduel from "../assets/inviduelterapi.png";
-import YdelserParteripi from "../assets/parterapi.png";
-import YdelserFamilieterapi from "../assets/familieterapi.png";
-import YdelserGruppesupervision from "../assets/gruppesupervision.png";
-import YdelserUndervisning from "../assets/undervisningogkurser.png";
-import YdelserFamilieopstilling from "../assets/familieopstilling.png";
- ---
+---
+//@ts-nocheck
+import Layout from "../../layouts/layout.astro";
+import Ydelser from "../../components/ydelser_details.astro";
+
+const url = `${import.meta.env.PUBLIC_SUPABASE_URL}/rest/v1/anne-louise-hjort?select=*`;
+const apiKey = import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+
+const response = await fetch(url, {
+  headers: {
+    apikey: apiKey,
+  },
+});
+
+const ydelser = await response.json();
+
+console.log(ydelser);
+---
+
 <h1>Ydelser og priser</h1>
-  <section class="grid-cards">
-<div class="radius-card">
-    <h4>Individuel terapi</h4>
-  <p>Behandling af private problemstillinger som f.eks stress, angst, depression, livskriser, mistrivsel, skilsmisse, sygdom og tab ved dødsfald, barndomstraumer. (...)</p>
-  <div class="logoydelse">
-  <div class="prisektion">
-  <h4>Pris:</h4>
-  <p>1.450 kr. pr. session (60 min.)</p>
-</div>
-<Image src={YdelserInviduel} alt="Individuel terapi" format="webp"/>
-</div>
-<a href=""><button><p>Læs mere</p></button></a>
+<section class="grid-cards">
+  {
+    ydelser.map((ydelse) => (
+      <article class="radius-card">
+        <h4>{ydelse.titel}</h4>
+        <p class="ydelse-info">{ydelse.info}</p>
 
-</div>
+        <div class="ydelser-details-pris-wapper">
+          <div class="pris">
+            {ydelse.show_price ? (
+              <p>
+                {" "}
+                <strong>Pris:</strong> {ydelse.tid} minutter pr. session á{" "}
+                {ydelse.pris}kr.{" "}
+              </p>
+            ) : (
+              <p>
+                {" "}
+                <strong>Pris:</strong> aftales individuelt.
+              </p>
+            )}
+          </div>
+          <div class="ydelser-details-billed">
+            <img src={`/src/assets/ydelser_icon/${ydelse.id}.png`} />
+          </div>
 
-  <div class="grid-card">
-  <h4>Parterapi</h4>
-  <p>Fokus i parterapi er kommunikation og at få øje på uhensigtsmæssige mønstre samt indsigt i egen og den andens historik. (...)</p>
-  <div class="logoydelse">
-  <div class="prisektion">
-  
-    <h4>Pris:</h4>
-<p>2.300 kr pr.session (90 min.)</p>
-</div>
-<Image src={YdelserParteripi} alt="Parterapi" format="webp"/>
-  </div>
-<a href=""><button><p>Læs mere</p></button></a>
-  </div>
-  <div class="grid-card">
-  <h4>Familieterapi</h4>
-  <p>Familieterapi drejer sig om at få indsigt i og forståelse for hinanden i en familie, så alle har en plads og føler sig anerkendt og inkluderet. (...)</p>
-   <div class="logoydelse">
-  <div class="prisektion">
-  <h4>Pris:</h4>
-<p>2.300 kr pr.session (90 min.)</p>
-</div>
-  <Image src={YdelserFamilieterapi} alt="Familieterapi" format="webp"/>
-  </div>
-  <a href=""><button><p>Læs mere</p></button></a>
-  </div>
-   <div class="radius-card1">
-  <h4>Individuel supervision</h4>
-  <p>Supervision til psykologer på vej mod at blive klinisk psykolog eller til specialist godkendelse. (...)</p>
-   <div class="logoydelse">
-  <div class="prisektion">
-  <h4>Pris:</h4>
-<p>1.500 kr pr.session (90 min.)</p>
-</div>
-<Image src={YdelserInviduel} alt="Individuel terapi" format="webp"/>
-</div>
-<a href=""><button><p>Læs mere</p></button></a>
-  </div>
-  <div class="grid-card">
-  <h4>Gruppesupervision 2-6 pers.</h4>
-  <p>Gruppesupervision til psykologer eller andre arbejdsgrupper som Sundhedsfaglige, pædagogiske samt evt. efterforskere eller andre med specialfunktioner indenfor bl.a. Politiet. (...)</p>
-  <div class="logoydelse">
-  <div class="prisektion">
-  <h4>Pris:</h4>
-<p>1.500 kr pr.session (90 min.)</p>
-</div>
-<Image src={YdelserGruppesupervision} alt="Gruppesupervision" format="webp"/>
-  </div>
-<a href=""><button><p>Læs mere</p></button></a>
-  </div>
-   <div class="grid-card">
-<h4>  Akut psykologisk gruppedebriefing 
-(max 12-15 pers.)</h4>
-  <p>Krisestyring og håndtering samt iværksættelse af psykologisk gruppedebriefing efter en voldsom hændelse på arbejdspladsen eller uddannelsesstedet. (...)</p>
-  <div class="logoydelse">
-  <div class="prisektion">
-  <h4>Pris og omfang: aftales individuelt/</h4>
-<p>udarbejdes specifikt til jeres arbejdsplads</p>
-</div>
-<Image src={YdelserGruppesupervision} alt="Gruppesupervision" format="webp"/>
-  </div>
-<a href=""><button><p>Læs mere</p></button></a>
-   </div>
-      <div class="grid-card">
-<h4>Undervisning og kurser</h4>
-  <p>Kurser i Krisestyring og håndtering ved akutte stressreaktioner i forbindelse med voldsomme hændelser samt kurser i afholdelse af psykologisk debriefing (...)</p>
-  <div class="logoydelse">
-  <div class="prisektion">
-  <h4>Pris og omfang: aftales individuelt/</h4>
-  <p>udarbejdes specifikt til jeres arbejdsplads</p>
-</div>
-<Image src={YdelserUndervisning} alt="Undervisning og kurser" format="webp"/>
-  </div>
-<a href=""><button><p>Læs mere</p></button></a>
-  </div>
- 
-    <div class="grid-card">
- <h4>Familieopstilling</h4>
-  <p>I Familieopstilling arbejdes der i dybden med traumer nedarvet i slægten. Det bliver muligt at opnå indsigt i og forståelse for egne umiddelbart uforklarlige reaktionsmønstre. (...)</p>
-  <div class="logoydelse">
-  <div class="prisektion">
-  <h4>Pris:</h4>
-<p>Pris: aftales individuelt</p>
-</div>
-<Image src={YdelserFamilieopstilling} alt="Familieopstilling" format="webp"/>
-  </div>
-<a href=""><button><p>Læs mere</p></button></a>
-  </div>
-   
-  </section>
-
-  <style>
-    /******************** Desktop *********************/
-    /******************** title *********************/
-    h1{
-        text-align: center;
-       
-    }
-    /******************** Hele grid*********************/
-.grid-cards{
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap:2rem;
-   padding: 3rem;
-   row-gap: 5rem;  
-}
-
-/******************** Grid bokse(uden border) *********************/
-.grid-card{
-    background-color:var(--color-section_accent);
-    color: var(--color-text-light);
- padding: 10px;
-   border-radius: 5px;
-    position: relative;
-      display: flex;
-    flex-direction: column;
-    padding-bottom:1rem;
-   
-   }
-   /******************** Inviduel terapi(med border)*********************/
-.radius-card{
-     border-radius: 55px 0 0;
-         background-color:var(--color-section_accent);
-           color: var(--color-text-light);
-         padding: 15px;
-          position: relative;
-           display: flex;
-    flex-direction: column;
-    padding-bottom:1rem;
-         
-}
-/******************** Inviduel supervision(med border) *********************/
-.radius-card1{
-      color: var(--color-text-light);
-         padding: 10px; 
-          border-radius: 0 60px 0 0;
-          background-color:var(--color-section_accent);
-          color: var(--color-text-light);
-           position: relative;
-              display: flex;
-    flex-direction: column;
-      padding-bottom:1rem;
-  
-}
-/******************** Knapperne *********************/
-button{
-background-color: var(--color-CTA);
-color: var(--color-bg);
-padding: 5px;
-border-radius: 5px;
-border-style: none;
-position: absolute;
-bottom: -40px;
-left: 0;
-width: 100%;
-}
-/******************** Ydelser billeder og pris *********************/
-img {
-display: block;
-    max-width: 120px;
-    height: auto;
-   }
-.logoydelse{
-   margin-top: auto;
-   display: flex;
-   justify-content: space-between;
-   align-items:flex-end;
-   gap:1rem;
-}
-/******************** Mobil *********************/
-/******************** Hele grid*********************/
-@media (max-width: 768px) {
-   .grid-cards{
-   grid-template-columns: 1fr;
-     gap:1rem;
-     row-gap: 4rem;
-    }
-    /******************** Grid bokse(uden border) *********************/
-.grid-card{
-    background-color:var(--color-section_accent);
-    color: var(--color-text-light);
-border-radius: 5px;
-   max-width:350px;
-   justify-items: center;
-   }
-   /******************** Inviduel terapi(med border)*********************/
-.radius-card{
-     border-radius: 40px 0 0;
-         background-color:var(--color-section_accent);
-           color: var(--color-text-light);
-       max-width:350px;
-     justify-items: center;
+          <a href={`/ydelser/${ydelse.slug}`}>
+            <button>
+              <p>Læs mere</p>
+            </button>
+          </a>
+        </div>
+      </article>
+    ))
   }
-  /******************** Inviduel supervision(med border) *********************/
-.radius-card1{
-      color: var(--color-text-light);
-       
-          background-color:var(--color-section_accent);
-          color: var(--color-text-light);
-   border-radius: 0;
-  max-width:350px;
-   justify-items: center;
-}
-/******************** Knapperne*********************/
-button{
+</section>
+
+<style>
+  /***************** overskrift ***********************/
+  h1 {
+    text-align: center;
+    padding: 5rem;
+  }
+
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 3rem;
+    row-gap: 5rem;
+  }
+
+  .radius-card p {
+    color: var(--color-text-light);
+  }
+
+  .grid-card {
+    background-color: var(--color-section_accent);
+    color: var(--color-bg);
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 769px) {
+    .grid-card first-child {
+      border-radius: 50px 5px 5px 5px;
+    }
+    .grid-card:nth-child(4) {
+      border-radius: 5px 50px 5px 5px;
+    }
+    .grid-card:nth-child(5) {
+      border-radius: 5px 5px 50px 5px;
+    }
+    .grid-card last-child {
+      border-radius: 5px 5px 5px 50px;
+    }
+  }
+  .radius-card {
+    border-radius: 10px 0 0;
+    background-color: var(--color-section_accent);
+    color: var(--color-bg);
+    padding: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .radius-card1 {
+    color: var(--color-text-light);
+    padding: 5px;
+    border-radius: 0 20px 0 0;
+    background-color: var(--color-section_accent);
+    color: var(--color-bg);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ydelse-info {
+    height: 40ch;
+    overflow: hidden;
+    padding: 0.5rem;
+    text-align: l;
+  }
+  /****************** pris og booking ****************/
+  .ydelser-details-pris-wapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: auto;
+    padding: 1rem;
+    border-radius: 5px 5px 5px 50px;
+    align-items: center;
+  }
+
+  .pris {
+    margin-top: 5px;
+    margin-bottom: 1rem;
+  }
+
+  button {
     background-color: var(--color-CTA);
-color: var(--color-bg);
-padding: 5px;
-border-radius: 5px;
-border-style: none;
-position: absolute;
-    bottom: -31px;
+    color: var(--color-bg);
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    position: absolute;
+    bottom: -40px;
     left: 0;
     width: 100%;
-}
-/******************** Ydelser billeder og pris *********************/
-img {
-  
-     margin-top: auto;
-  display: block;
- }
-}
+  }
+  /*********************** icon ***********************/
+  .ydelser-details-billed img {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: 0.1rem;
+    margin-right: 0.1rem;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .grid-cards {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .grid-card {
+      background-color: var(--color-section_accent);
+      color: var(--color-bg);
+      padding: 18px;
+      border-radius: 5px;
+      position: relative;
+    }
+  }
 </style>
