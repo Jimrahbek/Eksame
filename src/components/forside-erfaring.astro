@@ -1,26 +1,8 @@
 ---
-import Forside_erfaring from "../assets/forside-erfaring.png";
+import Inviduelterapi from "../assets/inviduelterapi.png";
 ---
 
-<div class="grid_1-1">
-  <div class="box_h2">
-    <h2>Faglig erfaring og uddannelse</h2>
-
-    <h4 class="h4_pad">Krisepsykolog</h4>
-    <h4 class="h4_pad">Autoriseret psykolog</h4>
-    <h4 class="h4_pad">
-      Specialist i klinisk psykologi samt godkendt supervisor
-    </h4>
-
-    <a href="/om_mig">
-      <button class="btn">Mere om min erfaring</button>
-    </a>
-  </div>
-
-  <div class="order">
-    <img src={Forside_erfaring.src} alt="Anne sidder i en stol">
-  </div>
-
+<section class="section_bg">
   <article class="grid_1-1">
     <section class="box_h2">
       <h2>Faglig erfaring og uddannelse</h2>
@@ -39,36 +21,39 @@ import Forside_erfaring from "../assets/forside-erfaring.png";
     </section>
 
     <div class="order">
-      <img class="order_img" src={Forside_erfaring.src} alt="" />
+      <img
+        class="order_img"
+        src={Inviduelterapi.src}
+        alt="Psykolog sidder og lytter til en patient"
+      />
     </div>
   </article>
+</section>
+<style>
+  .h4_pad {
+  }
 
-  <style>
-.h4_pad {
+  /* Dots */
+  .h4_pad::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 
-}
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
 
-/* Dots */
-.h4_pad::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+    background-color: var(--color-CTA);
+  }
 
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-
-background-color: var(--color-CTA);
-}
-
-.h4_pad{
+  .h4_pad {
     position: relative;
-  padding-left: 50px; 
-  padding-top: 30px;
-  padding-bottom: 60px;
-}
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
 
   .erfaring,
   .text_witdh {
@@ -97,7 +82,13 @@ background-color: var(--color-CTA);
     padding-top: 20px;
     padding-bottom: 20px;
   }
-
+  .order img {
+    max-height: 550px;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px 50px 5px 5px;
+  }
   .text_witdh {
     padding-left: 110px;
     padding-right: 110px;
