@@ -3,10 +3,18 @@ import Layout from "../layout/layout.astro";
 import Ydelse_cards from "../components/ydelser-cards.astro";
 import Ydelse_info from "../components/ydelser-info.astro";
 import Ydelse_book from "../components/ydelser-book.astro";
+
+const url = `${import.meta.env.PUBLIC_SUPABASE_URL}/rest/v1/anne-louise-hjort?select=*`;
+const apiKey = import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+const ydelser = await fetch(url, {
+  headers: {
+    apikey: apiKey ,
+  },
+}).then((res) => res.json());
 ---
 
 <Layout>
-<Ydelse_cards />
+<Ydelse_cards ydelse={ydelser} />
 <Ydelse_info />
 <Ydelse_book />
 </Layout>
