@@ -226,6 +226,9 @@ image {
   cursor: pointer;
   transition: background 0.2s ease;
 }
+.btn:hover {
+  background-color: var(--color-Head);
+}
 
 /************  Footer *************/
 

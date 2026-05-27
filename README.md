@@ -31,6 +31,8 @@ Vi har tænkt os at opsætte projektet i astro og lave siden dynamisk via. Supab
     └── layout/
         └── layout.astro
     └── pages/
+            ydelser
+                [slug].astro
         └── booking.astro
         └── index.astro
         └── om-mig.astro
