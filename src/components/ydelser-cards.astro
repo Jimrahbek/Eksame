@@ -23,15 +23,30 @@ console.log(ydelser);
     ydelser.map((ydelse) => (
       <article class="radius-card">
         <h4>{ydelse.titel}</h4>
-        <p class="ydelse-info">{ydelse.info}</p>
+       <p class="ydelse-info">
+  {(() => {
+    const text = ydelse.info ?? "";
+    const maxLength = 100;
+
+    if (text.length <= maxLength) return text;
+
+    const trimmed = text.slice(0, maxLength);
+    const lastSpace = trimmed.lastIndexOf(" ");
+
+    return trimmed.slice(0, lastSpace) + "...";
+  })()}
+</p>
 
         <div class="ydelser-details-pris-wapper">
           <div class="pris">
             {ydelse.show_price ? (
               <p>
+<strong>Pris:</strong>
                 {" "}
-                <strong>Pris:</strong> {ydelse.tid} minutter pr. session á{" "}
                 {ydelse.pris}kr.{" "}
+                <br>
+                {" "}
+                 {ydelse.tid} min. pr. session
               </p>
             ) : (
               <p>
@@ -120,7 +135,6 @@ console.log(ydelser);
   }
 
   .ydelse-info {
-    height: 40ch;
     overflow: hidden;
     padding: 0.5rem;
     text-align: l;
@@ -128,10 +142,9 @@ console.log(ydelser);
   /****************** pris og booking ****************/
   .ydelser-details-pris-wapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr auto;
     margin-top: auto;
-    padding: 1rem;
+    padding: 0.8rem;
     border-radius: 5px 5px 5px 50px;
     align-items: center;
   }
@@ -139,6 +152,10 @@ console.log(ydelser);
   .pris {
     margin-top: 5px;
     margin-bottom: 1rem;
+  }
+
+  .pris p{
+   font-size: 0.9rem;
   }
 
   button {
@@ -158,7 +175,8 @@ console.log(ydelser);
     margin-top: auto;
     margin-bottom: 0.1rem;
     margin-right: 0.1rem;
-    display: block;
+   gap: 2px;
+    display:block;
   }
 
   @media (max-width: 768px) {
