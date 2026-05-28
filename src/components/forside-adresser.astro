@@ -1,147 +1,185 @@
- ---
+---
 import adresse1 from "../assets/adresse1.png";
 import adresse2 from "../assets/adresse2.png";
- ---
- <div class="padding">
-<div class="adresser">
-    <h2>Adresser</h2>
-    <p>Mine klinikker ligger på Nørreport og i Dragør.
-</p>
-</div>
+---
 
-<div class="grid_1-1">
+<section class="section_adresse">
+  <div class="adresser">
+    <h2>Adresser</h2>
+    <p>Mine klinikker ligger på Nørreport og i Dragør.</p>
+  </div>
+
+  <article class="grid_1-1">
     <div>
-        <img src={adresse1.src} alt="Lokalation">
+      <img
+        src={adresse1.src}
+        style="width: 100%; height: 100%; border-radius: 5px;"
+        alt="Lokalation"
+      />
     </div>
     <div class="psykologhuset">
-        <a href="https://www.google.com/maps/place/N%C3%B8rre+Voldgade+21,+3.+Sal,+1358+K%C3%B8benhavn/@55.683961,12.5695261,17z/data=!3m1!4b1!4m6!3m5!1s0x46525305303b8dc9:0x6ddada7e15526ae!8m2!3d55.683961!4d12.572101!16s%2Fg%2F11ll_z2283?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D" class="h2_pad" target="_blank">
-        <h2 >Psykologhuset Trekanten</h2>
-        <h2 >Nørre Voldgade 21, 3. sal</h2>
-        <h2>1358 København K</h2>
-        </a>
-        <p class="text_width1">I hjertet af indre by, med plads forsorgning, ro, og . Denne cantale placering giver nem adgagng med offentlig transport</p>
-        
-        <p class="pad">(Klik på overskriften få at komme til Google Maps)</p>
+      <a
+        href="https://www.google.com/maps/place/N%C3%B8rre+Voldgade+21,+3.+Sal,+1358+K%C3%B8benhavn/@55.683961,12.5695261,17z/data=!3m1!4b1!4m6!3m5!1s0x46525305303b8dc9:0x6ddada7e15526ae!8m2!3d55.683961!4d12.572101!16s%2Fg%2F11ll_z2283?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
+        class="h2_pad"
+        target="_blank"
+      >
+        <h2>
+          Psykologhuset Trekanten Nørre Voldgade 21, 3. sal 1358 København K
+        </h2>
+      </a>
+      <p class="pad">(Klik på overskriften få at komme til Google Maps)</p>
+      <p class="text_width1">
+        I hjertet af indre by, med plads forsorgning, ro, og . Denne cantale
+        placering giver nem adgagng med offentlig transport
+      </p>
     </div>
-</div>
+  </article>
 
-
-<div class="grid">
+  <article class="grid">
     <div class="nordre">
-        <a href="https://www.google.com/maps/place/Ndr+Engvej+5,+2791+Drag%C3%B8r/@55.5971478,12.6656355,17z/data=!3m1!4b1!4m6!3m5!1s0x4653abb23f7fbd33:0x3ffd4c87918777d9!8m2!3d55.5971478!4d12.6682104!16s%2Fg%2F11c4j8zyg_?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D" class="h2_pad" target="_blank">
+      <a
+        href="https://www.google.com/maps/place/Ndr+Engvej+5,+2791+Drag%C3%B8r/@55.5971478,12.6656355,17z/data=!3m1!4b1!4m6!3m5!1s0x4653abb23f7fbd33:0x3ffd4c87918777d9!8m2!3d55.5971478!4d12.6682104!16s%2Fg%2F11c4j8zyg_?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
+        class="h2_pad"
+        target="_blank"
+      >
         <h2>Nordre Engvej 5,</h2>
         <h2>2791 Dragør</h2>
-        </a>
-        <p class="text_width">Dette lokale ligger i underetagen af min egen bolig på adressen, Grundet lokalets lokation, føles det roligt og privat, med lidt afstand til resten af boligen.</p>
+      </a>
+      <p class="pad">(Klik på overskriften få at komme til Google Maps)</p>
+      <p class="text_width">
+        Dette lokale ligger i underetagen af min egen bolig på adressen, Grundet
+        lokalets lokation, føles det roligt og privat, med lidt afstand til
+        resten af boligen.
+      </p>
     </div>
-        <div>
-        <img src={adresse2.src} alt="Billede af lokalation">
+
+    <div>
+      <img
+        src={adresse2.src}
+        style="width: 100%; height: 100%; border-radius: 5px;"
+        alt="Billede af lokalation"
+      />
     </div>
-</div>
-<div class="kontakt">
+  </article>
+
+  <article class="kontakt">
     <h2>Kontakt informationer</h2>
     <p>Mail: alh@husettrekanten.dk</p>
-    <p>Telf nr.: +45 21971464 </p>
-</div>
-</div>
-  <style>
-.pad{
-    padding-top: 80px;
-}
+    <p>Telf nr.: +45 21971464</p>
+  </article>
+</section>
 
-.padding{
-    padding-top: 20px;
-}
+<style>
+  /****************************  box styling *****************/
 
-.adresser,
-.psykologhuset,
-.nordre,
-.kontakt {
+  .psykologhuset,
+  .nordre {
     background-color: var(--color-section_accent);
-    padding: 18px 28px;
-    color: #FFFFFF;
-
+    padding: 3rem;
+    color: var(--color-text-light);
     width: 100%;
     max-width: 600px;
     box-sizing: border-box;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-.adresser {
+  a,
+  .nordre h2 {
+    color: var(--color-text-light);
+  }
+
+  .kontakt,
+  .adresser {
+    background-color: var(--color-section_bg);
+    padding: 18px 28px;
+    color: var(--color-text);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+
+  /************************** overordnet sektion *****************/
+
+  .section_adresse {
+    padding: 100px;
+    padding-top: 20px;
+  }
+
+  /************************* 1. række box / adresser *****************************/
+  .adresser {
     border-radius: 50px 5px 5px 5px;
     margin-bottom: 1rem;
-}
+  }
 
-.psykologhuset {
+  /************************* 2. række box / trekanten *****************************/
+
+  .psykologhuset {
     border-radius: 5px 50px 5px 5px;
-}
+  }
+  .grid_1-1,
+  .grid img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px 5px 5px 5px;
+  }
 
-.nordre {
-    border-radius: 5px 5px 5px 50px;
-}
-
-.kontakt {
-    border-radius: 5px 5px 50px 5px;
-    margin-bottom: 1rem;
-    margin-left: auto;
-}
-
-.grid_1-1,
-.grid {
+  .grid_1-1,
+  .grid {
     display: flex;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
     align-items: stretch;
-}
+    color: var(--color-text-light);
+  }
 
-.grid_1-1 > div:first-child,
-.grid > div:last-child {
+  .grid_1-1 > div:first-child,
+  .grid > div:last-child {
     flex: 1.4;
-}
+  }
 
-.grid_1-1 > div:last-child,
-.grid > div:first-child {
+  .grid_1-1 > div:last-child,
+  .grid > div:first-child {
     flex: 1;
-}
+  }
 
-.grid_1-1 img,
-.grid img {
+  .grid_1-1 img,
+  .grid img {
     width: 100%;
     height: 100%;
-    min-height: 320px;
-
+    min-height: 300px;
     object-fit: cover;
     display: block;
-}
+  }
 
+  /************************* 3. række box / dragør *****************************/
 
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+  .nordre {
+    border-radius: 5px 5px 5px 50px;
+  }
 
-.text_width,
-.text_width1,
-.h2_pad {
-    width: auto;
-}
+  /************************* 4. række box / kontakt *****************************/
 
-.h2_pad {
-    color: #FFFFFF;
-}
+  .kontakt {
+    border-radius: 5px 5px 50px 5px;
+    margin-bottom: 1rem;
+    margin-left: auto;
+  }
 
-/* Mobile */
-@media (max-width: 768px)  {
+  /* Mobile */
+  @media (max-width: 768px) {
     .grid_1-1,
     .grid {
-               display: grid;
-    grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: 1fr;
     }
 
     .adresser,
     .psykologhuset,
     .nordre {
-        max-width: 100%;
+      max-width: 100%;
     }
-}
- </style>
+  }
+</style>

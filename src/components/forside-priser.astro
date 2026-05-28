@@ -4,10 +4,9 @@ import Target from "../assets/target.png";
 import Plant from "../assets/plant.png";
 ---
 
-<div class="priser_section">
+<section class="forside_priser">
   <div class="align">
     <h2>Priser og ydelser</h2>
-
     <p class="p">
       Her finder du et overblik over de områder, jeg arbejder med. Jeg tilpasser
       altid forløbet til dine behov og din situation, så du får et trygt og
@@ -15,32 +14,32 @@ import Plant from "../assets/plant.png";
       fylder, i et tempo der passer til dig.
     </p>
   </div>
-
   <div class="grid_1-1-1">
-    <div>
+    <div class="icon">
       <p>Tryg og fortrolig ramme</p>
       <img src={Hand.src} alt="Hånd logo" />
     </div>
-
-    <div>
+    <div class="icon">
       <p>Individuelt tilpassede forløb</p>
       <img src={Target.src} alt="Target logo" />
     </div>
-
-    <div>
+    <div class="icon">
       <p>Fokus på din udvikling</p>
       <img src={Plant.src} alt="Plant logo" />
     </div>
   </div>
-
   <div class="align_btn">
     <a href="/ydelser">
       <button class="btn">Læs mere om mine tilbud</button>
     </a>
   </div>
-</div>
+</section>
 
 <style>
+  .forside_priser {
+    padding: 0 100px;
+  }
+
   .align {
     text-align: center;
     padding-bottom: 40px;
@@ -71,57 +70,32 @@ import Plant from "../assets/plant.png";
     padding-bottom: 20px;
   }
 
-  .p {
+  img {
+    width: 55px;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  p {
     max-width: 65ch;
     margin: 0 auto;
     text-align: left;
   }
   @media (max-width: 768px) {
-    .priser_section {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .align {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding-inline: 20px;
-    }
-
-    .p {
-      width: 100%;
-      max-width: 320px;
-      margin: 0 auto;
-      text-align: center;
+    .forside_priser {
+      padding: 0 20px;
     }
 
     .grid_1-1-1 {
-      width: 100%;
       display: grid;
       grid-template-columns: 1fr;
-      justify-items: center;
-      text-align: center;
-      gap: 40px;
     }
-
-    .grid_1-1-1 div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .align_btn {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
     .btn {
       width: 300px;
     }

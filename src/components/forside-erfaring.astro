@@ -3,20 +3,37 @@ import Inviduelterapi from "../assets/inviduelterapi.png";
 ---
 
 <section class="section_bg">
+  <article class="min_erfaring">
+    <h2>Min erfaring</h2>
+    <p>
+      Jeg har opbygget bred erfaring fra både det offentlige og private,
+      herunder arbejde med kriser, traumer og psykologisk rådgivning. Med
+      baggrund fra blandt andet Forsvaret, politiet og kommunale tilbud møder
+      jeg dig med solid faglighed og forståelse for komplekse livssituationer.
+    </p>
+    <p>
+      Jeg lægger vægt på at skabe et trygt rum, hvor du kan føle dig mødt og
+      arbejde med det, der fylder - i et tempo, der passer til dig.
+    </p>
+  </article>
+
   <article class="grid_1-1">
     <section class="box_h2">
       <h2>Faglig erfaring og uddannelse</h2>
-      <div class="h4_pad">
-        <div class="dippedut"></div><h4>Krisepsykolog</h4>
+      <div>
+        <div class="h4_pad dippedut_hover">
+          <div class="dippedut"></div><h4>Krisepsykolog</h4>
+        </div>
+        <div class="h4_pad dippedut_hover">
+          <div class="dippedut"></div><h4>Autoriseret psykolog</h4>
+        </div>
+        <div class="h4_pad dippedut_hover">
+          <div class="dippedut"></div><h4>
+            Specialist i klinisk psykologi samt godkendt supervisor
+          </h4>
+        </div>
       </div>
-      <div class="h4_pad">
-        <div class="dippedut"></div><h4>Autoriseret psykolog</h4>
-      </div>
-      <div class="h4_pad">
-        <div class="dippedut"></div><h4>
-          Specialist i klinisk psykologi samt godkendt supervisor
-        </h4>
-      </div>
+
       <a href="/om_mig"> <button class="btn">Mere om min erfaring</button> </a>
     </section>
 
@@ -29,77 +46,148 @@ import Inviduelterapi from "../assets/inviduelterapi.png";
     </div>
   </article>
 </section>
+
 <style>
-  .h4_pad {
-  }
-
-  /* Dots */
-  .h4_pad::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-
-    background-color: var(--color-CTA);
-  }
-
-  .h4_pad {
-    position: relative;
-    padding-left: 50px;
-    padding-top: 30px;
-    padding-bottom: 60px;
-  }
-
-  .erfaring,
-  .text_witdh {
-    color: var(--color-text-light);
-  }
-
-  .box_h2 {
-    border-radius: 5px 5px 5px 50px;
-    padding: 18px 28px;
-    background-color: var(--color-section_bg);
-  }
+  /************************* overordet sektion ******************/
 
   .section_bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: var(--color-section_accent);
-    padding-bottom: 30px;
-    margin-inline: -100px;
-  }
-
-  .erfaring {
-    padding-top: 40px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  .text_pad {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  .order img {
-    max-height: 550px;
-    width: auto;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 5px 50px 5px 5px;
-  }
-  .text_witdh {
-    padding-left: 110px;
-    padding-right: 110px;
+    padding: 50px 60px;
+    gap: 40px;
+    margin-inline: 0px;
   }
 
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-
+    justify-content: center;
     width: fit-content;
+    max-width: 1400px;
     margin-inline: auto;
+  }
+
+  /************************* h1 og intro tekst ******************/
+  .min_erfaring {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    align-items: center;
+  }
+
+  .min_erfaring h2,
+  p {
+    color: var(--color-text-light);
+    text-align: center;
+    max-width: 67ch;
+  }
+
+  /************************** H2 underoverskrift *****************/
+  .box_h2 {
+    border-radius: 5px 5px 5px 50px;
+    padding: 28px 28px;
+    background-color: var(--color-section_bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 550px;
+  }
+
+  /************************ h4 med prik ************************/
+
+  .h4_pad {
+    position: relative;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 60px;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .dippedut {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-CTA);
+  }
+
+  .dippedut_hover:hover {
+    .dippedut {
+      background-color: var(--color-Head);
+    }
+  }
+
+  /************************* billed *****************************/
+
+  .order img {
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 5px 50px 5px 5px;
+  }
+
+  /************************* overordet sektion ******************/
+  @media (max-width: 768px) {
+    .section_bg {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 0 10px;
+      margin-inline: 0px;
+      justify-content: center;
+    }
+
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+
+    .box_h2 {
+      padding: 28px 28px;
+      max-width: 550px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    /************************* billed *****************************/
+    .order {
+      order: -1;
+    }
+
+    .order img {
+      max-height: 250px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 5px 50px 5px 5px;
+    }
+
+    /************************ h4 med prik ************************/
+    .h4_pad {
+      padding-left: 30px;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      max-width: 30ch;
+    }
+
+    .h4_pad::before {
+      width: 15px;
+      height: 15px;
+    }
+
+    .text_witdh {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .btn {
+      width: 100%;
+      justify-self: center;
+    }
   }
 </style>
