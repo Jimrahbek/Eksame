@@ -1,132 +1,182 @@
- ---
-import { Image } from 'astro:assets';
+---
+import { Image } from "astro:assets";
 import YdelserAnneLou from "../assets/Anneloucomputer.png";
 import YdelserLaptop from "../assets/laptop.png";
 import YdelserLocation from "../assets/location.png";
 import YdelserBehov from "../assets/behov.png";
 import YdelserSikkerhed from "../assets/sikkerhed.png";
- ---
- 
- <section class="grid-ydelser-info">
-<div class="grid-boks">
+---
+
+<section class="grid-ydelser-info">
+  <div class="grid-boks">
     <div class="information-boks">
-    <h4>Yderlig information</h4>
-<p>Kørsel i forbindelse med opgaver
-500 kr pr. påbegyndt halve time samt høj kørselstakst pr km.</p>
-</div>
- <div class="betalings-boks">
-<p class="betaling">Betaling</p>
-<p>Privatpersoner betaler med mobilpay eller ved straksoverførsel fra netbank efter hver samtale og modtager elektronisk faktura efterfølgende. 
-Virksomheder betaler via EAN eller mailadresse og faktureres elektronisk.</p>
-</div>
-<div class="tilskud-boks">
-<p class="tilskud">Tilskudsmuligheder</p>
-<p>Mange privatpersoner og arbejdspladser har forskellige forsikringsordninger, som giver tilskud til psykolog behandling. Undersøg derfor, hvilke vilkår dit forsikringsselskab har, når du selv vælger en autoriseret privatpraktiserende psykolog</p>
-</div>
-</div>
-<Image class="Annelou" src={YdelserAnneLou} alt="Anne Louise" width="550" height="400" style="border-radius: 5px 5px 60px 5px;" format="webp"/>
- </section>
- <div class="logotekst">
-    <div class="iconsogtekst">
-  <Image src={YdelserLocation} alt="Location" format="webp"/>
-  <Image src={YdelserLaptop} alt="Laptop" format="webp"/>
+      <h4>Yderlig information</h4>
+      <p>
+        Kørsel i forbindelse med opgaver 500 kr pr. påbegyndt halve time samt
+        høj kørselstakst pr km.
+      </p>
+    </div>
+    <div class="betalings-boks">
+      <p class="betaling">Betaling</p>
+      <p>
+        Privatpersoner betaler med mobilpay eller ved straksoverførsel fra
+        netbank efter hver samtale og modtager elektronisk faktura
+        efterfølgende.  Virksomheder betaler via EAN eller mailadresse og
+        faktureres elektronisk.
+      </p>
+    </div>
+    <div class="tilskud-boks">
+      <p class="tilskud">Tilskudsmuligheder</p>
+      <p>
+        Mange privatpersoner og arbejdspladser har forskellige
+        forsikringsordninger, som giver tilskud til psykolog behandling.
+        Undersøg derfor, hvilke vilkår dit forsikringsselskab har, når du selv
+        vælger en autoriseret privatpraktiserende psykolog
+      </p>
+    </div>
   </div>
-  <p class="onelineogfysisk">Online og fysisk</p>
-<Image src={YdelserBehov} alt="Location" format="webp"/>
-  <p class="onelineogfysisk">Tilpasset dine behov</p>
-
-  <Image src={YdelserSikkerhed} alt="Location" format="webp"/>
-  <p class="onelineogfysisk">Trygt samtalerum</p>
-
+  <Image
+    class="Annelou"
+    src={YdelserAnneLou}
+    alt="Anne Louise"
+    width="550"
+    height="400"
+    style="border-radius: 5px 5px 60px 5px;"
+    format="webp"
+  />
+</section>
+<div class="logotekst">
+  <div class="iconsogtekst">
+    <div class="icon">
+      <Image src={YdelserLocation} alt="Location" format="webp" />
+      <Image src={YdelserLaptop} alt="Laptop" format="webp" />
+    </div>
+    <p class="onelineogfysisk">Online og fysisk</p>
+  </div>
+  <div class="icon">
+    <Image src={YdelserBehov} alt="Location" format="webp" />
+    <p class="onelineogfysisk">Tilpasset dine behov</p>
+  </div>
+  <div class="icon">
+    <Image src={YdelserSikkerhed} alt="Location" format="webp" />
+    <p class="onelineogfysisk">Trygt samtalerum</p>
+  </div>
 </div>
-  
+
 <style>
-    /******************** Desktop*********************/
-    /******************** Hele griddet *********************/
-.grid-ydelser-info{
+  /******************** Desktop*********************/
+  /******************** Hele griddet *********************/
+  .grid-ydelser-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding: 2rem;
     margin: 2rem auto;
-   align-items:center;
+    align-items: center;
   }
-/******************** Den grå boks(wrapper)*********************/
-.grid-boks{
-    background-color:var(--color-section_accent);
-    color: var(--color-text-light);
-         border-radius:5px 5px 5px 60px;
-         width:600px;
-         }
-/******************** Flexbox til logobilleder og tekst under den grå boks *********************/
-    .logotekst{
-    display: flex;
-    gap:1rem;
-    align-items: flex-start;
-   justify-content: center;
-  }
-/******************** Betaling overskrift *********************/
-.tilskud-boks{
-    padding: 1rem;
-}
-/******************** Betaling overskrift *********************/
-.betalings-boks{
-     padding: 1rem;
-}
-/******************** Ydelig  *********************/
-.information-boks{
-    padding: 1rem;
-}
-/******************** Betaling overskrift *********************/
-.betaling{
-    font-weight: bold;
-    
-}
-/******************** Betaling overskrift *********************/
-.tilskud{
-    font-weight: bold;
-}
-/******************** Tekst ved logobilleder *********************/
-.onelineogfysisk{
-    padding:5px;
-    margin-right: 3rem;
-}
-/******************** Mobil*********************/
-/******************** Hele griddet *********************/
- @media (max-width: 768px) {
-.grid-ydelser-info{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 0;
-    margin: 0;
-    padding-top: 2rem;
-     justify-items: center;
+
+  .grid-ydelser-info img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    display: block;
   }
   /******************** Den grå boks(wrapper)*********************/
- .grid-boks{
-    background-color:var(--color-section_accent);
+  .grid-boks {
+    background-color: var(--color-section_accent);
     color: var(--color-text-light);
-         border-radius:60px  5px 5px 5px;
-         width:300px;
-        padding: 5px;
-       }
-/******************** Gridbox(på desktop en flexbox) til logobilleder og tekst under den grå boks *********************/
-.logotekst{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-   justify-items: center;
-   padding:2rem;
-   }
-/******************** Tekst ved logobilleder *********************/
-.onelineogfysisk{
-margin-left: 3rem;
-}
-/******************** Billede af Anne Louise i mobil *********************/
-.Annelou{
-    width:300px;
-    height:auto;
+    border-radius: 5px 5px 5px 60px;
+    height: 390px;
+    width: 600px;
   }
-}
- </style>
+  /******************** Flexbox til logobilleder og tekst under den grå boks *********************/
+  .logotekst {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  /******************** Betaling overskrift *********************/
+  .tilskud-boks {
+    padding: 1rem;
+  }
+  /******************** Betaling overskrift *********************/
+  .betalings-boks {
+    padding: 1rem;
+  }
+  /******************** Ydelig  *********************/
+  .information-boks {
+    padding: 1rem;
+  }
+  /******************** Betaling overskrift *********************/
+  .betaling {
+    font-weight: bold;
+  }
+  /******************** Betaling overskrift *********************/
+  .tilskud {
+    font-weight: bold;
+  }
+  /******************** Tekst ved logobilleder *********************/
+  .onelineogfysisk {
+    padding: 5px;
+    margin-right: 3rem;
+  }
+  .icon {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .iconsogtekst {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+
+  .icon img {
+    width: 55px;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /******************** Mobil*********************/
+  /******************** Hele griddet *********************/
+  @media (max-width: 768px) {
+    .grid-ydelser-info {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+      padding-top: 2rem;
+      justify-items: center;
+    }
+    /******************** Den grå boks(wrapper)*********************/
+    .grid-boks {
+      background-color: var(--color-section_accent);
+      color: var(--color-text-light);
+      border-radius: 60px 5px 5px 5px;
+      width: 300px;
+      padding: 5px;
+    }
+    /******************** Gridbox(på desktop en flexbox) til logobilleder og tekst under den grå boks *********************/
+    .logotekst {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      justify-items: center;
+      padding: 2rem;
+    }
+    /******************** Tekst ved logobilleder *********************/
+    .onelineogfysisk {
+      margin-left: 3rem;
+    }
+    /******************** Billede af Anne Louise i mobil *********************/
+    .Annelou {
+      width: 300px;
+      height: auto;
+    }
+  }
+</style>
