@@ -45,21 +45,17 @@ import Hero from "../assets/forsideHero.png";
     text-align: center;
   }
 
-  .under_overskirft {
-    padding-bottom: 40px;
-    justify-content: left;
-  }
-
   /*****************  hero sektion ******************/
   .hero_grid {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
     justify-content: center;
     padding-top: 30px;
-    padding-left: 25px;
+    padding-left: 30px;
     padding-bottom: 30px;
-    margin: 0 auto;   
+    margin: 0 auto;
+    max-width: 900px;
   }
 
   /*****************  teskt felt ******************/
@@ -67,7 +63,7 @@ import Hero from "../assets/forsideHero.png";
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* gap: 120px; */
+    gap: 20px;
     padding: 0 25px;
   }
 
@@ -75,54 +71,30 @@ import Hero from "../assets/forsideHero.png";
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 550px;
+  }
+
+  p {
+    max-width: 72ch;
   }
   /*****************  billeder ******************/
 
-  .hero_img {
-    display: grid;
-    justify-content: right;
-    align-items: bottom;
-    grid-column: 2 / 2;
-  }
-
-  /* .hero_img img {
-    max-height: 550px;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px 50px 5px 5px;
-  } */
-
   .hero_img img {
-    max-height: 550px;
-    width: auto;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 5px 50px 5px 5px;
   }
 
   /*****************  CTA knap ******************/
   .btn {
-    padding-left: 100px;
-    padding-right: 100px;
-    justify-content: bottom;
+    padding-inline: 4rem;
   }
 
   .knap {
     padding: 5rem 5rem 0 0;
+    display: contents;
   }
 
   /*****************  CTA knap  & billed ******************/
-  /* .endestation {
-justify-content: bottom;
-align-items: bottom;
-}  */
-
-  /* .hero_grid .> div:last-child {
-display: flex;
-justify-content: bottom;
-} */
 
   @media (max-width: 768px) {
     .hero_grid {
@@ -130,12 +102,17 @@ justify-content: bottom;
       flex-direction: column;
       gap: 25px;
       margin: 0 1rem;
-      /* padding: 0 25px 40px 25px; */
-      padding: 0;
+      padding: 0 10px;
       box-sizing: border-box;
+      padding: 0 10px;
     }
 
-    .hero_grid > div:first-child {
+    .herosektion_text {
+      order: 2;
+      margin-bottom: 20px;
+    }
+
+    /* .hero_grid > div:first-child {
       order: 2;
       width: 100%;
     }
@@ -143,19 +120,28 @@ justify-content: bottom;
     .hero_grid > div:last-child {
       order: 1;
       width: 100%;
+    } */
+    .btn {
+      width: 100%;
+      border-radius: 5px 50px 5px 50px;
+      justify-content: center;
     }
-
     .hero_grid img {
       width: 100%;
       max-width: 320px;
       margin: 0 auto;
       border-radius: 24px;
       display: block;
+      border-radius: 5px 50px 5px 5px;
+    }
+    .hero_img {
+      display: flex;
+      justify-content: center;
+      border-radius: 5px 50px 5px 5px;
     }
 
-    /* Centrer indhold */
-    .hero_grid > div {
-      max-width: 320px;
+    .hero_grid {
+      max-width: 400px;
       margin: 0 auto;
     }
 

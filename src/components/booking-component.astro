@@ -3,14 +3,23 @@
 ---
 
 <h1 class="h1">Booking</h1>
-<section id="form_section">
+<section class="form_section">
   <form id="booking_form">
     <fieldset class="fieldset">
       <article id="form_info">
         <h2>Kontakt mig her:</h2>
-        <p>Du er velkommen til at tage kontakt til mig på telefonnummeret: +45 21971464, eller på min mail: alh@husettrekanten.dk.</p>
+        <p>
+          Du er velkommen til at tage kontakt til mig på telefonnummeret: +45
+          21971464, eller på min mail: alh@husettrekanten.dk.
+        </p>
         <br />
-        <p>Hvis du foretrækker det, kan du også udfylde den form, for at booke en tid hos mig. Hvis du kontakter mig igennem denne form, så bedes du give en kort beskrivelse af, hvad årsagen til du tager kontakt til mig er i “information”-feltet (alt information, der indsendes i denne form er krypteret, så al din information er sikret).</p>
+        <p>
+          Hvis du foretrækker det, kan du også udfylde den form, for at booke en
+          tid hos mig. Hvis du kontakter mig igennem denne form, så bedes du
+          give en kort beskrivelse af, hvad årsagen til du tager kontakt til mig
+          er i “information”-feltet (alt information, der indsendes i denne form
+          er krypteret, så al din information er sikret).
+        </p>
       </article>
       <div class="container">
         <div class="fulde_navn">
@@ -38,6 +47,9 @@
 </section>
 
 <style>
+  .form_section {
+    padding: 0 20px;
+  }
   .h1 {
     text-align: center;
     color: var(--color-text);
@@ -105,14 +117,18 @@
   #info {
     height: 80px;
   }
-  .btn{
-     margin-top: 1rem;
+  .btn {
+    margin-top: 1rem;
   }
   @media (min-width: 768px) {
     .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
+    }
+
+    .form_section {
+      padding: 0 100px;
     }
   }
 </style>

@@ -1,74 +1,103 @@
- ---
+---
 import Hand from "../assets/hand-shake.png";
 import Target from "../assets/target.png";
 import Plant from "../assets/plant.png";
- ---
- <div class="align">
-<h2>Priser og ydelser</h2>
-<p class="p">Her finder du et overblik over de områder, jeg arbejder med. Jeg tilpasser altid forløbet til dine behov og din situation, så du får et trygt og meningsfuldt udgangspunkt for forandring. Sammen arbejder vi med det, der fylder, i et tempo der passer til dig.</p>
-</div>
-<div class="grid_1-1-1">
-<div>
-    <p>Tryg og fortrolig ramme</p>
-    <img src={Hand.src} alt="Hånd logo">
-</div>
-<div>
-    <p>Individuelt tilpassede forløb</p>
-    <img src={Target.src} alt="Target logo">
-</div>
-<div>
-    <p>Fokus på din udvikling</p>
-    <img src={Plant.src} alt="Plant logo">
- </div>
-</div>
-<div class="align_btn">
+---
+
+<section class="forside_priser">
+  <div class="align">
+    <h2>Priser og ydelser</h2>
+    <p class="p">
+      Her finder du et overblik over de områder, jeg arbejder med. Jeg tilpasser
+      altid forløbet til dine behov og din situation, så du får et trygt og
+      meningsfuldt udgangspunkt for forandring. Sammen arbejder vi med det, der
+      fylder, i et tempo der passer til dig.
+    </p>
+  </div>
+  <div class="grid_1-1-1">
+    <div class="icon">
+      <p>Tryg og fortrolig ramme</p>
+      <img src={Hand.src} alt="Hånd logo" />
+    </div>
+    <div class="icon">
+      <p>Individuelt tilpassede forløb</p>
+      <img src={Target.src} alt="Target logo" />
+    </div>
+    <div class="icon">
+      <p>Fokus på din udvikling</p>
+      <img src={Plant.src} alt="Plant logo" />
+    </div>
+  </div>
+  <div class="align_btn">
     <a href="/ydelser">
-<button class="btn" >Læs mere om mine tilbud</button>
-</a>
-</div>
-  <style>
-.align{
+      <button class="btn">Læs mere om mine tilbud</button>
+    </a>
+  </div>
+</section>
+
+<style>
+  .forside_priser {
+    padding: 0 100px;
+  }
+
+  .align {
     text-align: center;
     padding-bottom: 40px;
-}
-.grid_1-1-1{
-          display: grid;
+  }
+  .grid_1-1-1 {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     text-align: center;
-}
+  }
 
-.grid_1-1-1 img{
-padding-top: 5px;
-}
+  .grid_1-1-1 img {
+    padding-top: 5px;
+  }
 
-.align_btn{
+  .align_btn {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
-}
+  }
 
-.btn{
+  .btn {
     width: 550px;
-}
+  }
 
-h2{
+  h2 {
     padding-top: 100px;
     padding-bottom: 20px;
-}
+  }
 
-.p{
-  max-width: 65ch;
- margin: 0 auto;
- text-align: left;
-}
-@media (max-width: 768px) {
-  .grid_1-1-1{
-        display: grid;
-    grid-template-columns: 1fr;
+  img {
+    width: 55px;
+    height: 100%;
+    object-fit: contain;
   }
-    .btn{
-    width: 300px;
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
   }
-}
- </style>
+  p {
+    max-width: 65ch;
+    margin: 0 auto;
+    text-align: left;
+  }
+  @media (max-width: 768px) {
+    .forside_priser {
+      padding: 0 20px;
+    }
+
+    .grid_1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .btn {
+      width: 300px;
+    }
+  }
+</style>
